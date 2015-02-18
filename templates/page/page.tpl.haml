@@ -1,0 +1,10 @@
+- if(!empty($messages) || !empty($help) || !empty($tabs))
+  .Drupal-specific<>
+    - if(isset($messages))
+      = render($messages)
+    - if(isset($help))
+      = render($help)
+    - if (isset($tabs))
+      = render($tabs)
+= render($page['content'])
+= theme('footer')

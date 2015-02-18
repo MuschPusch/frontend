@@ -1,0 +1,17 @@
+%div.node.clear-block(id="node-#{$node->nid}")
+  - if (!$page)
+    %h2.node-title
+      %a(href="#{$node_url}" title="#{$title}")= $title
+
+  -# Meta information
+  -if ($submitted || isset($terms))
+    .meta
+      - if ($submitted)
+        %span.submitted= $submitted
+      -if (isset($terms))
+        %span.terms.terms-inline= $terms
+
+  -# Content
+  .content.clear-block= render($content)
+  - if (isset($links))
+    = $links

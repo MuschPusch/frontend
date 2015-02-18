@@ -1,0 +1,5 @@
+<?php
+/**
+ * @file
+ * menu helper.
+ */

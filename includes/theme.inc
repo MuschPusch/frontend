@@ -9,10 +9,11 @@
  *
  * Return various tpl files.
  */
-function frontend_theme($existing, $type, $theme, $path) {
-  $theme_declaration = tcm_register_theme_functions($existing, $type, $theme, $path);
-  return $theme_declaration;
-}
+//@TODO: tcm in conflict with oxide
+//function frontend_theme($existing, $type, $theme, $path) {
+  //$theme_declaration = tcm_register_theme_functions($existing, $type, $theme, $path);
+  //return $theme_declaration;
+//}
 
 /**
  * Implements hook_html_head_alter().

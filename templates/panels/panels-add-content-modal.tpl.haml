@@ -1,0 +1,20 @@
+-# Template to control the add content modal.
+huhu
+.panels-add-content-modal
+  .panels-section-column.panels-section-column-categories
+    .inside
+      .panels-categories-box
+        - foreach ($categories_array as $category)
+          = print $category
+      = $root_content
+  = $messages
+  - if (!empty($header))
+    .panels-categories-description
+      = $header
+
+  - if (!empty($columns))
+    .panels-section-columns
+      - foreach ($columns as $column_id => $column)
+        .panels-section-column.panels-section-column-{$column_id}
+          .inside
+            = $column

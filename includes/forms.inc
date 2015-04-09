@@ -5,6 +5,23 @@
  */
 
 /**
+ * Implement theme_form().
+ */
+function frontend_form($variables) {
+  $element = $variables ['element'];
+  if (isset($element ['#action'])) {
+    $element ['#attributes']['action'] = drupal_strip_dangerous_protocols($element ['#action']);
+  }
+  element_set_attributes($element, array('method', 'id'));
+  if (empty($element ['#attributes']['accept-charset'])) {
+    $element ['#attributes']['accept-charset'] = "UTF-8";
+  }
+  $element ['#attributes']['class'][] = 'Form';
+
+  return '<form' . drupal_attributes($element ['#attributes']) . '>' . $element ['#children'] . '</form>';
+}
+
+/**
  * Implements theme_form_element().
  */
 function frontend_form_element($variables) {
@@ -119,4 +136,50 @@ function frontend_textarea($variables) {
   $output .= '<textarea' . drupal_attributes($element ['#attributes']) . '>' . check_plain($element ['#value']) . '</textarea>';
   // $output .= '</div>';
   return $output;
+}
+
+/**
+ * Implements theme_button().
+ */
+function frontend_button($variables) {
+  $element = $variables ['element'];
+  $element ['#attributes']['type'] = 'submit';
+  element_set_attributes($element, array('id', 'name', 'value'));
+
+  $element ['#attributes']['class'][] = 'Form-input';
+  $element ['#attributes']['class'][] = 'Form-input--' . $element ['#button_type'];
+  if (!empty($element ['#attributes']['disabled'])) {
+    $element ['#attributes']['class'][] = 'is-disabled';
+  }
+
+  $wrapper_attributes = array(
+    'class' => array('Form-item', 'Form-item--button'),
+  );
+
+  $output = '<div' . drupal_attributes($wrapper_attributes) . '>';
+  $output .= '<input' . drupal_attributes($element ['#attributes']) . ' />';
+  $output .= '</div>';
+
+  return $output;
+}
+
+/**
+ * Implements theme_container().
+ */
+function frontend_container($variables) {
+  $element = $variables ['element'];
+  // Ensure #attributes is set.
+  $element += array('#attributes' => array());
+
+  // Special handling for form elements.
+  if (isset($element ['#array_parents'])) {
+    // Assign an html ID.
+    if (!isset($element ['#attributes']['id'])) {
+      $element ['#attributes']['id'] = $element ['#id'];
+    }
+    // Add the 'form-wrapper' class.
+    $element ['#attributes']['class'] = array('Form-actions');
+  }
+
+  return '<div' . drupal_attributes($element ['#attributes']) . '>' . $element ['#children'] . '</div>';
 }

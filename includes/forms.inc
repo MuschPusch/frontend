@@ -16,7 +16,7 @@ function frontend_form($variables) {
   if (empty($element ['#attributes']['accept-charset'])) {
     $element ['#attributes']['accept-charset'] = "UTF-8";
   }
-  $element ['#attributes']['class'][] = 'Form';
+  $element ['#attributes']['class'][] = 'Form ' . $element['#modifier'];
 
   return '<form' . drupal_attributes($element ['#attributes']) . '>' . $element ['#children'] . '</form>';
 }
@@ -122,6 +122,39 @@ function frontend_password($variables) {
   $element ['#attributes']['type'] = 'password';
   element_set_attributes($element, array('id', 'name', 'size', 'maxlength'));
   _form_set_class($element, array('Form-input', 'Form-input--text', 'Form-input--password'));
+
+  return '<input' . drupal_attributes($element ['#attributes']) . ' />';
+}
+
+/**
+ * Implements theme_checkbox().
+ */
+function frontend_checkbox($variables) {
+  $element = $variables ['element'];
+  $element ['#attributes']['type'] = 'checkbox';
+  element_set_attributes($element, array('id', 'name', '#return_value' => 'value'));
+
+  // Unchecked checkbox has #value of integer 0.
+  if (!empty($element ['#checked'])) {
+    $element ['#attributes']['checked'] = 'checked';
+  }
+  _form_set_class($element, array('Form-input', 'Form-input--checkbox'));
+
+  return '<input' . drupal_attributes($element ['#attributes']) . ' />';
+}
+
+/**
+ * Implements theme_radio().
+ */
+function frontend_radio($variables) {
+  $element = $variables ['element'];
+  $element ['#attributes']['type'] = 'radio';
+  element_set_attributes($element, array('id', 'name', '#return_value' => 'value'));
+
+  if (isset($element ['#return_value']) && $element ['#value'] !== FALSE && $element ['#value'] == $element ['#return_value']) {
+    $element ['#attributes']['checked'] = 'checked';
+  }
+  _form_set_class($element, array('Form-input', 'Form-input--radio'));
 
   return '<input' . drupal_attributes($element ['#attributes']) . ' />';
 }

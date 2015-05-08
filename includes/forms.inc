@@ -62,6 +62,7 @@ function frontend_form_element($variables) {
   if (!empty($element['#attributes']['disabled'])) {
     $attributes['class'][] = 'is-disabled';
   }
+
   $output = '<div' . drupal_attributes($attributes) . '>' . "\n";
 
   // If #title is not set, we don't display any label or required marker.
@@ -161,7 +162,7 @@ function frontend_textfield($variables) {
   $element = $variables ['element'];
   $element ['#attributes']['type'] = 'text';
   element_set_attributes($element, array('id', 'name', 'value', 'size', 'maxlength'));
-  _form_set_class($element, array('Form-input', 'Form-input--text'));
+  frontend_form_set_class($element, array('Form-input', 'Form-input--text'));
 
   $extra = '';
   if ($element ['#autocomplete_path'] && drupal_valid_path($element ['#autocomplete_path'])) {
@@ -192,7 +193,7 @@ function frontend_password($variables) {
   $element = $variables ['element'];
   $element ['#attributes']['type'] = 'password';
   element_set_attributes($element, array('id', 'name', 'size', 'maxlength'));
-  _form_set_class($element, array('Form-input', 'Form-input--text', 'Form-input--password'));
+  frontend_form_set_class($element, array('Form-input', 'Form-input--text', 'Form-input--password'));
 
   return '<input' . drupal_attributes($element ['#attributes']) . ' />';
 }
@@ -212,7 +213,7 @@ function frontend_checkbox($variables) {
   if (!empty($element ['#checked'])) {
     $element ['#attributes']['checked'] = 'checked';
   }
-  _form_set_class($element, array('Form-input', 'Form-input--checkbox'));
+  frontend_form_set_class($element, array('Form-input', 'Form-input--checkbox'));
 
   return '<input' . drupal_attributes($element ['#attributes']) . ' />';
 }
@@ -231,7 +232,7 @@ function frontend_radio($variables) {
   if (isset($element ['#return_value']) && $element ['#value'] !== FALSE && $element ['#value'] == $element ['#return_value']) {
     $element ['#attributes']['checked'] = 'checked';
   }
-  _form_set_class($element, array('Form-input', 'Form-input--radio'));
+  frontend_form_set_class($element, array('Form-input', 'Form-input--radio'));
 
   return '<input' . drupal_attributes($element ['#attributes']) . ' />';
 }
@@ -245,7 +246,7 @@ function frontend_textarea($variables) {
   }
   $element = $variables ['element'];
   element_set_attributes($element, array('id', 'name', 'cols', 'rows'));
-  _form_set_class($element, array('Form-input', 'Form-input--textarea'));
+  frontend_form_set_class($element, array('Form-input', 'Form-input--textarea'));
 
   // $wrapper_attributes = array(
   //   'class' => array('Form-textarea-wrapper'),
@@ -313,4 +314,25 @@ function frontend_container($variables) {
   }
 
   return '<div' . drupal_attributes($element ['#attributes']) . '>' . $element ['#children'] . '</div>';
+}
+
+/**
+ * Implements _form_set_class().
+ */
+function frontend_form_set_class(&$element, $class = array()) {
+  if (!empty($class)) {
+    if (!isset($element['#attributes']['class'])) {
+      $element['#attributes']['class'] = array();
+    }
+    $element['#attributes']['class'] = array_merge($element['#attributes']['class'], $class);
+  }
+  // This function is invoked from form element theme functions, but the
+  // rendered form element may not necessarily have been processed by
+  // form_builder().
+  if (!empty($element['#required'])) {
+    $element['#attributes']['class'][] = 'is-required';
+  }
+  if (isset($element['#parents']) && form_get_error($element) !== NULL && !empty($element['#validated'])) {
+    $element['#attributes']['class'][] = 'is-failing';
+  }
 }

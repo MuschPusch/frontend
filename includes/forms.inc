@@ -25,6 +25,10 @@ function frontend_form($variables) {
   if (empty($element ['#attributes']['accept-charset'])) {
     $element ['#attributes']['accept-charset'] = "UTF-8";
   }
+
+  if (empty($element['#modifier'])) {
+    $element['#modifier'] = NULL;
+  }
   $element ['#attributes']['class'][] = 'Form ' . $element['#modifier'];
 
   return '<form' . drupal_attributes($element ['#attributes']) . '>' . $element ['#children'] . '</form>';

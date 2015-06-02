@@ -244,6 +244,17 @@ function frontend_radio($variables) {
 /**
  * Implements theme_textarea().
  */
+function frontend_select($variables) {
+  $element = $variables ['element'];
+  element_set_attributes($element, array('id', 'name', 'size'));
+  _form_set_class($element, array('Form-input', 'Form-input--select'));
+
+  return '<select' . drupal_attributes($element ['#attributes']) . '>' . form_select_options($element) . '</select>';
+}
+
+/**
+ * Implements theme_textarea().
+ */
 function frontend_textarea($variables) {
   if (frontend_ignore_customizations()) {
     return theme_textarea($variables);

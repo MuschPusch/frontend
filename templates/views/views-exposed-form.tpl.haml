@@ -15,12 +15,12 @@
 -# @ingroup views_templates
 
 - if (!empty($q))
-  = $q;
+  = $q
 
 .views-exposed-form
   .views-exposed-widgets.clearfix
     - foreach ($widgets as $id => $widget)
-      .views-exposed-widget(id=$widget->id."-wrapper" class="views-widget--".$id)
+      .views-exposed-widget(id="#{$widget->id}-wrapper" class="views-widget--#{$id}")
         - if (!empty($widget->label))
           %label(for=$widget->id)
             = $widget->label

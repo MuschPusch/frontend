@@ -27,3 +27,12 @@ function frontend_html_head_alter(&$head_elements) {
     }
   }
 }
+
+/**
+ * Implements theme_preprocess_search_result().
+ */
+function frontend_preprocess_search_result(&$vars) {
+  $result = $vars['result'];
+  $node = $result['node'];
+  $vars['rendered_node'] = node_view($node, 'search_result');
+}

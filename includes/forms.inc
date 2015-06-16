@@ -245,7 +245,7 @@ function frontend_radio($variables) {
 }
 
 /**
- * Implements theme_textarea().
+ * Implements theme_select().
  */
 function frontend_select($variables) {
   $element = $variables ['element'];
@@ -264,7 +264,7 @@ function frontend_textarea($variables) {
   }
   $element = $variables ['element'];
   element_set_attributes($element, array('id', 'name', 'cols', 'rows'));
-  frontend_form_set_class($element, array('Form-input', 'Form-input--textarea'));
+  frontend_form_set_class($element, array('Form-input', 'Form-input--text', 'Form-input--textarea'));
 
   // $wrapper_attributes = array(
   //   'class' => array('Form-textarea-wrapper'),

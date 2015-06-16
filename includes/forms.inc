@@ -29,7 +29,10 @@ function frontend_form($variables) {
   if (empty($element['#modifier'])) {
     $element['#modifier'] = NULL;
   }
-  $element ['#attributes']['class'][] = 'Form ' . $element['#modifier'];
+  else {
+    $element['#modifier'] = ' ' . $element['#modifier'];
+  }
+  $element ['#attributes']['class'][] = 'Form' . $element['#modifier'];
 
   return '<form' . drupal_attributes($element ['#attributes']) . '>' . $element ['#children'] . '</form>';
 }

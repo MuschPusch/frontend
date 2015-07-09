@@ -16,9 +16,9 @@
     %title=$head_title
     = $styles
     /[if lt IE 9]
-      %script(src="#{file_create_url(base_path().$directory.'/assets/scripts/vendor/respond.min.js')}")
-    %script(src="#{file_create_url(base_path().$directory.'/assets/scripts/vendor/modernizr.js')}")
+      %script(src="#{file_create_url(base_path().$directory.'/assets/javascripts/vendor/respond.min.js')}")
+    -# %script(src="#{file_create_url(base_path().$directory.'/assets/javascripts/vendor/modernizr.js')}")
     = drupal_get_js()
   %body
-  .Page<>
-    = $page_top, $page, $page_bottom
+    .Page
+      = $page_top, $page, $page_bottom

@@ -1,0 +1,19 @@
+{
+  "name": "frontend",
+  "description": "",
+  "repo": "factorial-io/frontend",
+  "version": "0.0.0",
+  "styles": [
+    "theme/panels/panels.css",
+    "index.css"],
+  "scripts": ["index.js"],
+  "paths": [
+    "components",
+    "components_local"
+  ],
+  "locals": [],
+  "dependencies": {
+    "FortAwesome/Font-Awesome": "*"
+  },
+  "license": "MIT"
+}

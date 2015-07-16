@@ -6,6 +6,7 @@
   "styles": [
     "theme/panels/panels.css",
     "theme/modal/modal.css",
+    "theme/fedit/fedit.css",
     "index.css"
   ],
   "scripts": [

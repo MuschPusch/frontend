@@ -11,6 +11,11 @@
   --uiFontSize--md: 16px;
   --uiFontSize--sm: 12px;
   --uiIconFont: FontAwesome;
+  --uiIconFontSize: 16px;
+
+  --uiHilightBackgroundColor: rgba(255,255,0,0.3);
+  --uiHilightColor: #ff0;
+  --uiPlaceholderTextColor: #000;
 
   --uiLinkColor: #000;
   --uiLinkColorHover: #fff;

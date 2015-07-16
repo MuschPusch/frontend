@@ -1,0 +1,21 @@
+.js-Fedit {
+  border: 0;
+  transition: all 0.25s;
+  border-radius: 0;
+}
+
+.js-Fedit:hover {
+  margin: -3px;
+  padding: 3px;
+  width: auto;
+  background-color: var(--uiHilightBackgroundColor);
+}
+
+.js-Fedit:focus {
+  border: 1px solid var(--uiHilightColor);
+  padding: 2px;
+  margin: -3px;
+  width: auto;
+  box-shadow: 0 0 10 px var(--uiHilightBackgroundColor);
+  background-color: var(--uiHilightBackgroundColor);
+}

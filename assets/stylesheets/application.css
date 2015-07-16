@@ -3257,10 +3257,12 @@ div.panels-ipe-pseudobutton-container a:hover {
 .PanelsCategories-box a,
 .PanelsAddContentLink a {
   display: block;
-  padding: 8px 20px 8px 50px;
+  padding: 12px 20px 12px 50px;
   color: #000 !important;
   position: relative;
   font-weight: bold;
+  font-size: 16px;
+  line-height: 100%;
 }
 
 .PanelsCategories-box a:before,
@@ -3269,7 +3271,7 @@ div.panels-ipe-pseudobutton-container a:hover {
   font-size: 120%;
   position: absolute;
   left: 20px;
-  top: 7px;
+  top: 12px;
   font-weight: normal;
 }
 
@@ -3285,6 +3287,130 @@ div.panels-ipe-pseudobutton-container a:hover {
 .PanelsAddContentLink a:hover {
   color: #fff !important;
   background-color: #000;
+}
+
+div.panels-ipe-placeholder {
+  background-color: rgba(255,255,0,0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+div.panels-ipe-placeholder {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+
+div.panels-ipe-newblock {
+  box-shadow: none;
+}
+
+ul.panels-ipe-linkbar li {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+}
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon,
+ul.panels-ipe-linkbar li a {
+  display: block;
+  width: 35px;
+  height: 35px;
+  border: #000 2px solid;
+  border-radius: 25px;
+  box-shadow: none;
+  background: none;
+  background-color: #fff;
+  color: #000;
+  position: relative;
+}
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:before,
+ul.panels-ipe-linkbar li a:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  line-height: 32px;
+  text-align: center;
+  content: "x";
+  font-size: 16px;
+  font-family: FontAwesome;
+  font-weight: normal;
+}
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:before {
+  content: "\f047";
+}
+
+ul.panels-ipe-linkbar li.style a:before {
+  content: "\f013";
+}
+
+ul.panels-ipe-linkbar li.add-pane a:before {
+  content: "\f067";
+}
+
+ul.panels-ipe-linkbar li.edit a:before {
+  content: "\f040";
+}
+
+ul.panels-ipe-linkbar li.delete a:before {
+  content: "\f014";
+}
+
+ul.panels-ipe-linkbar li a:hover {
+  background: none;
+  background-color: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon span,
+ul.panels-ipe-linkbar li a span {
+  display: none;
+}
+
+div.panels-ipe-newblock a.style {
+  margin-right: .5em;
+}
+
+div.panels-ipe-newblock a.add span {
+  background-image: url(../images/icon-add.png);
+}
+
+div.panels-ipe-handlebar-wrapper li.delete a span {
+  background-image: url(../images/icon-delete.png);
+}
+
+div.panels-ipe-draghandle,
+div.panels-ipe-nodraghandle {
+  background: none;
+  background-color: #fff;
+  border-bottom: solid 2px #000;
+}
+
+div.panels-ipe-handlebar-wrapper {
+  border: none;
+}
+
+.panels-ipe-editing .panels-ipe-portlet-content {
+  margin: 0;
+}
+
+.panels-ipe-editing div.panels-ipe-portlet-wrapper {
+  border: 0;
+  margin: 0;
+  width: auto;
+}
+
+.panels-ipe-editing div.panels-ipe-portlet-wrapper:hover {
+  border: solid 2px #ff0;
+  margin: -2px;
+}
+
+.panels-ipe-dragbar-admin-title {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
 }
 
 div.ctools-modal-content {
@@ -3358,5 +3484,28 @@ div.ctools-modal-content .modal-content {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
+}
+
+.js-Fedit {
+  border: 0;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  border-radius: 0;
+}
+
+.js-Fedit:hover {
+  margin: -3px;
+  padding: 3px;
+  width: auto;
+  background-color: rgba(255,255,0,0.3);
+}
+
+.js-Fedit:focus {
+  border: 1px solid #ff0;
+  padding: 2px;
+  margin: -3px;
+  width: auto;
+  box-shadow: 0 0 10 px rgba(255,255,0,0.3);
+  background-color: rgba(255,255,0,0.3);
 }
 

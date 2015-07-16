@@ -5,15 +5,21 @@
   "version": "0.0.0",
   "styles": [
     "theme/panels/panels.css",
-    "index.css"],
-  "scripts": ["index.js"],
+    "theme/modal/modal.css",
+    "index.css"
+  ],
+  "scripts": [
+    "index.js"
+  ],
   "paths": [
     "components",
     "components_local"
   ],
   "locals": [],
   "dependencies": {
-    "FortAwesome/Font-Awesome": "*"
+    "FortAwesome/Font-Awesome": "*",
+    "suitcss/components-grid": "^2.0.2",
+    "suitcss/utils-size": "~0.7.2"
   },
   "license": "MIT"
 }

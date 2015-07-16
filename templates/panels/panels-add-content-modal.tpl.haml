@@ -1,19 +1,20 @@
 -# Template to control the add content modal.
-.panels-add-content-modal
-  .panels-section-column.panels-section-column-categories
+.PanelsContentModal.PanelsContentModal--addContent.Grid.Grid--withGutter
+  .PanelsSectionColumn.PanelsSectionColumn--categories.Grid-cell.u-size1of4
     .inside
-      .panels-categories-box
+      .PanelsCategories-box
         - foreach ($categories_array as $category)
-          = print $category
+          = $category
       = $root_content
-  = $messages
-  - if (!empty($header))
-    .panels-categories-description
-      = $header
+  .Grid-cell.u-size-3of4
+    = $messages
+    - if (!empty($header))
+      .PanelsCategories-description
+        = $header
 
-  - if (!empty($columns))
-    .panels-section-columns
-      - foreach ($columns as $column_id => $column)
-        .panels-section-column.panels-section-column-{$column_id}
-          .inside
-            = $column
+    - if (!empty($columns))
+      .PanelsSectionColumns
+        - foreach ($columns as $column_id => $column)
+          .PanelsSectionColumn.PanelsSectionCoolumn-{$column_id}
+            .inside
+              = $column

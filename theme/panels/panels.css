@@ -8,7 +8,8 @@ div#panels-ipe-control-container {
 
 div.panels-ipe-pseudobutton-container,
 div.panels-ipe-control .panels-ipe-save,
-div.panels-ipe-control .panels-ipe-cancel {
+div.panels-ipe-control .panels-ipe-cancel,
+div.ctools-modal-content .Form-submit {
   background: inherit;
   background-color: var(--buttonBackgroundColor);
   border: 2px var(--buttonTextColor) solid;
@@ -18,8 +19,8 @@ div.panels-ipe-control .panels-ipe-cancel {
   line-height: 25px;
   height: auto;
   color: var(--buttonTextColor);
-  font-family: Helvetica, Arial, sans-serif !important;
-  font-size: 12px !important;
+  font-family: var(--uiFont) !important;
+  font-size: var(--uiFontSize--sm) !important;
   font-weight: bold;
   margin: 0 10px 0 10px;
 
@@ -27,7 +28,9 @@ div.panels-ipe-control .panels-ipe-cancel {
 
 div.panels-ipe-pseudobutton-container:hover,
 div.panels-ipe-control .panels-ipe-save:hover,
-div.panels-ipe-control .panels-ipe-cancel:hover {
+div.panels-ipe-control .panels-ipe-cancel:hover,
+div.ctools-modal-content .Form-submit:hover {
+
   background: none;
   background-color: var(--buttonBackgroundColorHover);
   border-color: var(--buttonTextColorHover);
@@ -36,8 +39,8 @@ div.panels-ipe-control .panels-ipe-cancel:hover {
 
 
 div.panels-ipe-pseudobutton-container a {
-  font-family: Helvetica, Arial, sans-serif !important;
-  font-size: 12px;
+  font-family: var(--uiFont) !important;
+  font-size: var(--uiFontSize--sm);
   color: var(--buttonTextColor);
   background: inherit !important;
   padding: 0 0 0 30px !important;
@@ -49,8 +52,8 @@ div.panels-ipe-pseudobutton-container a {
 div.panels-ipe-pseudobutton-container a:before {
   position: absolute;
   left: 5px;
-  font-family: FontAwesome;
-  font-size: 14px;
+  font-family: var(--uiIconFont);
+  font-size: 120%;
 }
 
 div.panels-ipe-pseudobutton-container a.panels-ipe-startedit:before {
@@ -65,3 +68,41 @@ div.panels-ipe-pseudobutton-container a:hover {
   color: var(--buttonTextColorHover)
 }
 
+
+.PanelsCategories-box a,
+.PanelsAddContentLink {
+  border-bottom: 1px solid #eee;
+}
+
+.PanelsCategories-box a,
+.PanelsAddContentLink a {
+  display: block;
+  padding: 8px 20px 8px 50px;
+  color: var(--uiLinkColor) !important;
+  position: relative;
+  font-weight: bold;
+}
+
+.PanelsCategories-box a:before,
+.PanelsAddContentLink a:before {
+  font-family: var(--uiIconFont);
+  font-size: 120%;
+  position: absolute;
+  left: 20px;
+  top: 7px;
+  font-weight: normal;
+}
+.PanelsCategories-box a:before {
+  content: "\f009";
+
+}
+.PanelsAddContentLink a:before {
+  content: "\f12e";
+
+}
+
+.PanelsCategories-box a:hover,
+.PanelsAddContentLink a:hover {
+  color: var(--uiLinkColorHover) !important;
+  background-color: var(--uiLinkColor);
+}

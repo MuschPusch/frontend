@@ -135,6 +135,14 @@ require.define = function (name, exports) {
     exports: exports
   };
 };
+require.register("suitcss~utils-size@0.7.2", function (exports, module) {
+require('./lib/size.css');
+require('./lib/size-sm.css');
+require('./lib/size-md.css');
+require('./lib/size-lg.css');
+
+});
+
 require.register("frontend", function (exports, module) {
 'use strict';
 

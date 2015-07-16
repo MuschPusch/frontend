@@ -8,7 +8,8 @@ div#panels-ipe-control-container {
 
 div.panels-ipe-pseudobutton-container,
 div.panels-ipe-control .panels-ipe-save,
-div.panels-ipe-control .panels-ipe-cancel {
+div.panels-ipe-control .panels-ipe-cancel,
+div.ctools-modal-content .Form-submit {
   background: inherit;
   background-color: var(--buttonBackgroundColor);
   border: 2px var(--buttonTextColor) solid;
@@ -18,8 +19,8 @@ div.panels-ipe-control .panels-ipe-cancel {
   line-height: 25px;
   height: auto;
   color: var(--buttonTextColor);
-  font-family: Helvetica, Arial, sans-serif !important;
-  font-size: 12px !important;
+  font-family: var(--uiFont) !important;
+  font-size: var(--uiFontSize--sm) !important;
   font-weight: bold;
   margin: 0 10px 0 10px;
 
@@ -27,7 +28,9 @@ div.panels-ipe-control .panels-ipe-cancel {
 
 div.panels-ipe-pseudobutton-container:hover,
 div.panels-ipe-control .panels-ipe-save:hover,
-div.panels-ipe-control .panels-ipe-cancel:hover {
+div.panels-ipe-control .panels-ipe-cancel:hover,
+div.ctools-modal-content .Form-submit:hover {
+
   background: none;
   background-color: var(--buttonBackgroundColorHover);
   border-color: var(--buttonTextColorHover);
@@ -36,8 +39,8 @@ div.panels-ipe-control .panels-ipe-cancel:hover {
 
 
 div.panels-ipe-pseudobutton-container a {
-  font-family: Helvetica, Arial, sans-serif !important;
-  font-size: 12px;
+  font-family: var(--uiFont) !important;
+  font-size: var(--uiFontSize--sm);
   color: var(--buttonTextColor);
   background: inherit !important;
   padding: 0 0 0 30px !important;
@@ -49,8 +52,8 @@ div.panels-ipe-pseudobutton-container a {
 div.panels-ipe-pseudobutton-container a:before {
   position: absolute;
   left: 5px;
-  font-family: FontAwesome;
-  font-size: 14px;
+  font-family: var(--uiIconFont);
+  font-size: 120%;
 }
 
 div.panels-ipe-pseudobutton-container a.panels-ipe-startedit:before {
@@ -63,5 +66,176 @@ div.panels-ipe-pseudobutton-container a.panels-ipe-change-layout:before {
 
 div.panels-ipe-pseudobutton-container a:hover {
   color: var(--buttonTextColorHover)
+}
+
+
+.PanelsCategories-box a,
+.PanelsAddContentLink {
+  border-bottom: 1px solid #eee;
+}
+
+.PanelsCategories-box a,
+.PanelsAddContentLink a {
+  display: block;
+  padding: 12px 20px 12px 50px;
+  color: var(--uiLinkColor) !important;
+  position: relative;
+  font-weight: bold;
+  font-size: var(--uiFontSize--md);
+  line-height: 100%;
+}
+
+
+
+.PanelsCategories-box a:before,
+.PanelsAddContentLink a:before {
+  font-family: var(--uiIconFont);
+  font-size: 120%;
+  position: absolute;
+  left: 20px;
+  top: 12px;
+  font-weight: normal;
+}
+.PanelsCategories-box a:before {
+  content: "\f009";
+
+}
+.PanelsAddContentLink a:before {
+  content: "\f12e";
+
+}
+
+.PanelsCategories-box a:hover,
+.PanelsAddContentLink a:hover {
+  color: var(--uiLinkColorHover) !important;
+  background-color: var(--uiLinkColor);
+}
+
+
+div.panels-ipe-placeholder {
+  background-color: var(--uiHilightBackgroundColor);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+div.panels-ipe-placeholder {
+  font-family: var(--uiFont);
+  font-size: var(--uiFontSize--md);
+  color: var(--uiPlaceholderTextColor);
+
+}
+
+div.panels-ipe-newblock {
+  box-shadow: none;
+}
+
+ul.panels-ipe-linkbar li {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+}
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon,
+ul.panels-ipe-linkbar li a {
+  box-sizing: border-box;
+  display: block;
+  width: 35px;
+  height: 35px;
+  border: var(--buttonTextColor) 2px solid;
+  border-radius: 25px;
+  box-shadow: none;
+  background: none;
+  background-color: var(--buttonBackgroundColor);
+  color: var(--buttonTextColor);
+  position: relative;
+}
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:before,
+ul.panels-ipe-linkbar li a:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  line-height: 32px;
+  text-align: center;
+  content: "x";
+  font-size: var(--uiIconFontSize);
+  font-family: var(--uiIconFont);
+  font-weight: normal;
+}
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:before {
+  content: "\f047";
+}
+
+ul.panels-ipe-linkbar li.style a:before {
+  content: "\f013";
+}
+
+ul.panels-ipe-linkbar li.add-pane a:before {
+  content: "\f067";
+}
+
+ul.panels-ipe-linkbar li.edit a:before {
+  content: "\f040";
+}
+
+ul.panels-ipe-linkbar li.delete a:before {
+  content: "\f014";
+}
+
+ul.panels-ipe-linkbar li a:hover {
+  background: none;
+  background-color: var(--buttonTextColor);
+  color: var(--buttonBackgroundColor);
+  border-color: var(--buttonBackgroundColor);
+}
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon span,
+ul.panels-ipe-linkbar li a span {
+  display: none;
+}
+
+
+
+div.panels-ipe-newblock a.style {
+  margin-right: .5em;
+}
+
+div.panels-ipe-newblock a.add span {
+  background-image: url(../images/icon-add.png);
+}
+
+div.panels-ipe-handlebar-wrapper li.delete a span {
+  background-image: url(../images/icon-delete.png);
+}
+
+div.panels-ipe-draghandle,
+div.panels-ipe-nodraghandle {
+  background: none;
+  background-color: #fff;
+  border-bottom: solid 2px #000;
+}
+
+div.panels-ipe-handlebar-wrapper {
+  border: none;
+}
+
+.panels-ipe-editing .panels-ipe-portlet-content {
+  margin: 0;
+}
+
+.panels-ipe-editing div.panels-ipe-portlet-wrapper {
+  border: 0;
+  margin: 0;
+  width: auto;
+}
+
+.panels-ipe-editing div.panels-ipe-portlet-wrapper:hover {
+  border: solid 2px var(--uiHilightColor);
+  margin: -2px;
+}
+
+.panels-ipe-dragbar-admin-title {
+  font-family: var(--uiFont);
+  font-size: var(--uiFontSize--md);
 }
 

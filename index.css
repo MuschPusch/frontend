@@ -1,9 +1,33 @@
+@custom-media --sm-viewport (min-width: 768px);
+@custom-media --md-viewport (min-width: 1024px);
+@custom-media --lg-viewport (min-width: 1280px);
+@custom-media --retina only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx), only screen and (-webkit-min-device-pixel-ratio: 2);
+
 
 
 :root {
+  --uiFont: Helvetica, Arial, sans-serif;
+  --uiFontSize--lg: 20px;
+  --uiFontSize--md: 16px;
+  --uiFontSize--sm: 12px;
+  --uiIconFont: FontAwesome;
+  --uiIconFontSize: 16px;
+
+  --uiHilightBackgroundColor: rgba(255,255,0,0.3);
+  --uiHilightColor: #ff0;
+  --uiPlaceholderTextColor: #000;
+
+  --uiLinkColor: #000;
+  --uiLinkColorHover: #fff;
+
   --buttonBackgroundColor: #fff;
   --buttonBackgroundColorHover: #000;
   --buttonTextColor: #000;
   --buttonTextColorHover: #fff;
+
+  --modalBorderColor: #000;
+  --modalBackDropBackgroundColor: #000;
+  --modalTextColor: #000;
+  --modalBackgroundColor: #fff;
 }
 

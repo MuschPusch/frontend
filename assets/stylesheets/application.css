@@ -3312,6 +3312,7 @@ ul.panels-ipe-linkbar li {
 
 div.panels-ipe-draghandle span.panels-ipe-draghandle-icon,
 ul.panels-ipe-linkbar li a {
+  box-sizing: border-box;
   display: block;
   width: 35px;
   height: 35px;

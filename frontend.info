@@ -4,4 +4,3 @@ version = 7.x-1.0
 core = 7.x
 engine = oxide
 plugins[panels][layouts] = templates/layouts/onecol
-stylesheets[all][] = assets/stylesheets/application.css

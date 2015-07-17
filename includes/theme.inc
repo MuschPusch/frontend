@@ -42,7 +42,7 @@ function frontend_preprocess_search_result(&$vars) {
 function frontend_preprocess_html() {
   global $user;
   if ($user->uid > 0) {
-    drupal_add_css(path_to_theme() . '/assets/stylesheets/application.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+    drupal_add_css(drupal_get_path('theme', 'frontend') . '/assets/stylesheets/application.css', array('group' => CSS_THEME, 'every_page' => TRUE));
     $settings = array(
       'CToolsModal' => array(
         'loadingText' => t('Loading...'),
@@ -64,7 +64,7 @@ function frontend_preprocess_html() {
           'addWidth' => 0,
           'addHeight' => 0,
           'contentRight' => 45,
-          'contentBottom' => 85
+          'contentBottom' => 75
         ),
       ),
     );

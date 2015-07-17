@@ -254,4 +254,5 @@ div.panels-ipe-placeholder h3 {
   font-family: var(--uiFont);
   font-size: var(--uiFontSize--md);
   padding-left: 20px;
+  width: 75%;
 }

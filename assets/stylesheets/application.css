@@ -3582,6 +3582,7 @@ div.ctools-modal-content .modal-content {
   width: auto;
   height: auto;
   padding-top: 0;
+  z-index: 9999;
 }
 
 .Drupal-specific ul.tabs.primary:hover:before {

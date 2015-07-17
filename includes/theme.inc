@@ -64,7 +64,7 @@ function frontend_preprocess_html() {
           'addWidth' => 0,
           'addHeight' => 0,
           'contentRight' => 45,
-          'contentBottom' => 75
+          'contentBottom' => 85
         ),
       ),
     );

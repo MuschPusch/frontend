@@ -1,0 +1,71 @@
+.Drupal-specific {
+  position: relative;
+}
+
+.Drupal-specific ul.tabs.primary {
+  position: absolute;
+  right: -40px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family: var(--uiFont);
+  font-size: var(--uiFontSize--sm);
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+
+.Drupal-specific ul.tabs.primary:before {
+  font-family: var(--uiIconFont);
+  font-size: var(--uiIconFontSize);
+  content: "\f040";
+  position: absolute;
+  line-height: 30px;
+  width: 33px;
+  height: 33px;
+  text-align: center;
+  border-radius: 50px;
+  border: 2px solid var(--buttonTextColor);
+  background-color: var(--buttonBackgroundColor);
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+.Drupal-specific ul.tabs.primary:hover {
+  overflow: auto;
+  width: auto;
+  height: auto;
+  padding-top: 0;
+}
+
+.Drupal-specific ul.tabs.primary:hover:before {
+  display: none;
+}
+
+
+.Drupal-specific ul.tabs.primary li {
+  display: block;
+}
+
+.Drupal-specific ul.tabs.primary li a {
+  padding: 8px 20px 8px 20px;
+  background-color: var(--buttonBackgroundColor);
+  color: var(--buttonTextColor);
+  border: 0;
+  display: block;
+  width: 200px;
+  border-bottom: 2px solid var(--buttonTextColor);
+
+}
+
+
+.Drupal-specific ul.tabs.primary li a:hover,
+.Drupal-specific ul.tabs.primary li.active a {
+  background-color: var(--buttonTextColor);
+  color: var(--buttonBackgroundColor);
+}
+

@@ -105,6 +105,7 @@ div.panels-ipe-pseudobutton-container a:hover {
 
 }
 
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:hover,
 .PanelsCategories-box a:hover,
 .PanelsAddContentLink a:hover {
   color: var(--uiLinkColorHover) !important;
@@ -113,14 +114,12 @@ div.panels-ipe-pseudobutton-container a:hover {
 
 
 div.panels-ipe-placeholder {
-  background-color: var(--uiHilightBackgroundColor);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-div.panels-ipe-placeholder {
+  background-color: var(--buttonTextColor);
+  border: 0;
+  color: var(--buttonBackgroundColor);
   font-family: var(--uiFont);
   font-size: var(--uiFontSize--md);
-  color: var(--uiPlaceholderTextColor);
+  color: var(--buttonBackgroundColor);
 
 }
 
@@ -239,3 +238,20 @@ div.panels-ipe-handlebar-wrapper {
   font-size: var(--uiFontSize--md);
 }
 
+.panels-ipe-editing .panels-ipe-sort-container .ui-sortable-placeholder {
+  border: 2px solid var(--uiHilightColor);
+  margin: -2px;
+  background-color: var(--uiHilightBackgroundColor);
+  margin: 1em 0;
+	border-radius: 0;
+}
+
+div.panels-ipe-placeholder {
+  padding: 1px;
+}
+
+div.panels-ipe-placeholder h3 {
+  font-family: var(--uiFont);
+  font-size: var(--uiFontSize--md);
+  padding-left: 20px;
+}

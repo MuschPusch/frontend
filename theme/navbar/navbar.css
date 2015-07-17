@@ -1,0 +1,11 @@
+#navbar-administration {
+  font-family: var(--uiFont);
+}
+
+#navbar-administration .navbar-tray a {
+  color: var(--buttonTextColor);
+}
+
+#navbar-administration .navbar-tray a {
+  color: var(--buttonTextColor);
+}

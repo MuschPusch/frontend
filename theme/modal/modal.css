@@ -26,6 +26,7 @@ div.ctools-modal-content .modal-title {
 }
 
 div.ctools-modal-content a.close {
+  box-sizing: border-box;
   font-size:0;
   position: absolute;
   display: block;
@@ -73,4 +74,5 @@ div.ctools-modal-content .modal-content {
   font-family: var(--uiFont);
   font-size: var(--uiFontSize--md);
 }
+
 

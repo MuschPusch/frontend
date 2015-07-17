@@ -3196,13 +3196,13 @@ div.panels-ipe-control .panels-ipe-cancel,
 div.ctools-modal-content .Form-submit {
   background: inherit;
   background-color: #fff;
-  border: 2px #000 solid;
+  border: 2px rgb(15, 15, 15) solid;
   box-shadow: 0 0 2px rgba(#fff,0.2);
   padding: 4px 15px 4px 15px;
   border-radius: 25px;
   line-height: 25px;
   height: auto;
-  color: #000;
+  color: rgb(15, 15, 15);
   font-family: Helvetica, Arial, sans-serif !important;
   font-size: 12px !important;
   font-weight: bold;
@@ -3214,7 +3214,7 @@ div.panels-ipe-control .panels-ipe-save:hover,
 div.panels-ipe-control .panels-ipe-cancel:hover,
 div.ctools-modal-content .Form-submit:hover {
   background: none;
-  background-color: #000;
+  background-color: rgb(15, 15, 15);
   border-color: #fff;
   color: #fff;
 }
@@ -3222,7 +3222,7 @@ div.ctools-modal-content .Form-submit:hover {
 div.panels-ipe-pseudobutton-container a {
   font-family: Helvetica, Arial, sans-serif !important;
   font-size: 12px;
-  color: #000;
+  color: rgb(15, 15, 15);
   background: inherit !important;
   padding: 0 0 0 30px !important;
   line-height: 25px !important;
@@ -3258,7 +3258,7 @@ div.panels-ipe-pseudobutton-container a:hover {
 .PanelsAddContentLink a {
   display: block;
   padding: 12px 20px 12px 50px;
-  color: #000 !important;
+  color: rgb(15, 15, 15) !important;
   position: relative;
   font-weight: bold;
   font-size: 16px;
@@ -3283,21 +3283,20 @@ div.panels-ipe-pseudobutton-container a:hover {
   content: "\f12e";
 }
 
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:hover,
 .PanelsCategories-box a:hover,
 .PanelsAddContentLink a:hover {
   color: #fff !important;
-  background-color: #000;
+  background-color: rgb(15, 15, 15);
 }
 
 div.panels-ipe-placeholder {
-  background-color: rgba(255,255,0,0.3);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-div.panels-ipe-placeholder {
+  background-color: rgb(15, 15, 15);
+  border: 0;
+  color: #fff;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
-  color: #000;
+  color: #fff;
 }
 
 div.panels-ipe-newblock {
@@ -3316,12 +3315,12 @@ ul.panels-ipe-linkbar li a {
   display: block;
   width: 35px;
   height: 35px;
-  border: #000 2px solid;
+  border: rgb(15, 15, 15) 2px solid;
   border-radius: 25px;
   box-shadow: none;
   background: none;
   background-color: #fff;
-  color: #000;
+  color: rgb(15, 15, 15);
   position: relative;
 }
 
@@ -3361,7 +3360,7 @@ ul.panels-ipe-linkbar li.delete a:before {
 
 ul.panels-ipe-linkbar li a:hover {
   background: none;
-  background-color: #000;
+  background-color: rgb(15, 15, 15);
   color: #fff;
   border-color: #fff;
 }
@@ -3414,22 +3413,40 @@ div.panels-ipe-handlebar-wrapper {
   font-size: 16px;
 }
 
+.panels-ipe-editing .panels-ipe-sort-container .ui-sortable-placeholder {
+  border: 2px solid #ff0;
+  margin: -2px;
+  background-color: rgba(255,255,0,0.3);
+  margin: 1em 0;
+  border-radius: 0;
+}
+
+div.panels-ipe-placeholder {
+  padding: 1px;
+}
+
+div.panels-ipe-placeholder h3 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  padding-left: 20px;
+}
+
 div.ctools-modal-content {
   font-size: 12px;
-  border: solid 2px #000;
-  box-shadow: -1em 1em 1em rgba(#000, 0.5);
+  border: solid 2px rgb(15, 15, 15);
+  box-shadow: -1em 1em 1em rgba(rgb(15, 15, 15), 0.5);
   border-radius: 10px;
 }
 
 #modalBackdrop {
   position: fixed!important;
-  background-color: #000 !important;
+  background-color: rgb(15, 15, 15) !important;
 }
 
 div.ctools-modal-content .modal-header {
   padding: 20px 20px 4px 20px;
   background: none;
-  background-Color: #000;
+  background-Color: rgb(15, 15, 15);
   position: relative;
 }
 
@@ -3441,6 +3458,7 @@ div.ctools-modal-content .modal-title {
 }
 
 div.ctools-modal-content a.close {
+  box-sizing: border-box;
   font-size: 0;
   position: absolute;
   display: block;
@@ -3458,7 +3476,7 @@ div.ctools-modal-content a.close {
 div.ctools-modal-content a.close:hover,
 div.ctools-modal-content a.close:hover:before {
   background-color: #fff;
-  color: #000;
+  color: rgb(15, 15, 15);
 }
 
 div.ctools-modal-content a.close:before {
@@ -3508,5 +3526,85 @@ div.ctools-modal-content .modal-content {
   width: auto;
   box-shadow: 0 0 10 px rgba(255,255,0,0.3);
   background-color: rgba(255,255,0,0.3);
+}
+
+#navbar-administration {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#navbar-administration .navbar-tray a {
+  color: rgb(15, 15, 15);
+}
+
+#navbar-administration .navbar-tray a {
+  color: rgb(15, 15, 15);
+}
+
+.Drupal-specific {
+  position: relative;
+}
+
+.Drupal-specific ul.tabs.primary {
+  position: absolute;
+  right: -40px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+
+.Drupal-specific ul.tabs.primary:before {
+  font-family: FontAwesome;
+  font-size: 16px;
+  content: "\f040";
+  position: absolute;
+  line-height: 30px;
+  width: 33px;
+  height: 33px;
+  text-align: center;
+  border-radius: 50px;
+  border: 2px solid rgb(15, 15, 15);
+  background-color: #fff;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+.Drupal-specific ul.tabs.primary:hover {
+  overflow: auto;
+  width: auto;
+  height: auto;
+  padding-top: 0;
+}
+
+.Drupal-specific ul.tabs.primary:hover:before {
+  display: none;
+}
+
+.Drupal-specific ul.tabs.primary li {
+  display: block;
+}
+
+.Drupal-specific ul.tabs.primary li a {
+  padding: 8px 20px 8px 20px;
+  background-color: #fff;
+  color: rgb(15, 15, 15);
+  border: 0;
+  display: block;
+  width: 200px;
+  border-bottom: 2px solid rgb(15, 15, 15);
+}
+
+.Drupal-specific ul.tabs.primary li a:hover,
+.Drupal-specific ul.tabs.primary li.active a {
+  background-color: rgb(15, 15, 15);
+  color: #fff;
 }
 

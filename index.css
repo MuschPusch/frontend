@@ -15,19 +15,19 @@
 
   --uiHilightBackgroundColor: rgba(255,255,0,0.3);
   --uiHilightColor: #ff0;
-  --uiPlaceholderTextColor: #000;
+  --uiPlaceholderTextColor: rgb(15, 15, 15);
 
-  --uiLinkColor: #000;
+  --uiLinkColor: rgb(15, 15, 15);
   --uiLinkColorHover: #fff;
 
   --buttonBackgroundColor: #fff;
-  --buttonBackgroundColorHover: #000;
-  --buttonTextColor: #000;
+  --buttonBackgroundColorHover: rgb(15, 15, 15);
+  --buttonTextColor: rgb(15, 15, 15);
   --buttonTextColorHover: #fff;
 
-  --modalBorderColor: #000;
-  --modalBackDropBackgroundColor: #000;
-  --modalTextColor: #000;
+  --modalBorderColor: rgb(15, 15, 15);
+  --modalBackDropBackgroundColor: rgb(15, 15, 15);
+  --modalTextColor: rgb(15, 15, 15);
   --modalBackgroundColor: #fff;
 }
 

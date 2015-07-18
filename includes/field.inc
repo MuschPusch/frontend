@@ -12,7 +12,9 @@ function frontend_field($variables) {
 }
 
 function frontend_preprocess_field(&$variables) {
-  frontend_fedit_field($variables);
+  if (module_exists('fedit')) {
+    frontend_fedit_field($variables);
+  }
 }
 
 /**

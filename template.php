@@ -25,11 +25,10 @@ function frontend_fedit($content, $entity_type, $entity_bundle, $entity_id, $nam
     return $output;
   }
   $data = fedit_helper_generate_data($entity_type, $entity_bundle, $entity_id, $name, $html);
-  $attrs = array(
-    'id' => $data['id'],
-    'data-options' => json_encode($data),
-    'class' => 'js-Fedit',
-  );
-  return '<div ' . drupal_attributes($attrs). '>' . $output . '</div>';
+
+  return theme('fedit_wrap', array(
+    'content' => $content,
+    'data' => $data
+  ));
 }
 

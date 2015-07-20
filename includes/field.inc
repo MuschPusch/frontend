@@ -4,23 +4,20 @@
  * Implementation of theme_field().
  */
 function frontend_field($variables) {
+  if (module_exists('fedit')) {
+    frontend_fedit_wrap_field($variables);
+  }
+
   $output = '';
   foreach ($variables['items'] as $delta => $item) {
     $output .= drupal_render($item);
   }
   return $output;
 }
-
-function frontend_preprocess_field(&$variables) {
-  if (module_exists('fedit')) {
-    frontend_fedit_field($variables);
-  }
-}
-
 /**
  * Wrap the field-content with fedit-wrapper, if necessary.
  */
-function frontend_fedit_field(&$variables) {
+function frontend_fedit_wrap_field(&$variables) {
   if (!user_access('access fedit')) {
     return;
   }

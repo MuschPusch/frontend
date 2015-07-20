@@ -23,5 +23,6 @@ function frontend_preprocess_node(&$vars, $hook) {
     $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__' . str_replace('-', '_', $vars['view_mode']);
   }
   $node = $vars['node'];
+  $vars['title_plain'] = $vars['title'];
   $vars['title'] = frontend_fedit($vars['title'], 'node', $node->type, $node->nid, 'title', FALSE);
 }

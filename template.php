@@ -26,9 +26,10 @@ function frontend_fedit($content, $entity_type, $entity_bundle, $entity_id, $nam
   }
   $data = fedit_helper_generate_data($entity_type, $entity_bundle, $entity_id, $name, $html);
 
-  return theme('fedit_wrap', array(
-    'content' => $content,
-    'data' => $data
-  ));
+  return array(
+    '#theme' => 'fedit_wrap',
+    '#content' => $content,
+    '#data' => $data
+  );
 }
 

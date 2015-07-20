@@ -24,5 +24,6 @@ function frontend_preprocess_node(&$vars, $hook) {
   }
   $node = $vars['node'];
   $vars['title_plain'] = $vars['title'];
-  $vars['title'] = frontend_fedit($vars['title'], 'node', $node->type, $node->nid, 'title', FALSE);
+  $title = frontend_fedit($vars['title'], 'node', $node->type, $node->nid, 'title', FALSE);
+  $vars['title'] = drupal_render($title);
 }

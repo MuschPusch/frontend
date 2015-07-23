@@ -3541,14 +3541,10 @@ div.ctools-modal-content .modal-content {
   color: rgb(15, 15, 15);
 }
 
-.Drupal-specific {
-  position: relative;
-}
-
 .Drupal-specific ul.tabs.primary {
   position: absolute;
-  right: -40px;
-  top: 5px;
+  right: 6px;
+  top: 3px;
   width: 40px;
   height: 40px;
   overflow: hidden;
@@ -3559,6 +3555,7 @@ div.ctools-modal-content .modal-content {
   font-size: 12px;
   box-sizing: border-box;
   padding-top: 40px;
+  z-index: 9999;
 }
 
 .Drupal-specific ul.tabs.primary:before {
@@ -3583,7 +3580,6 @@ div.ctools-modal-content .modal-content {
   width: auto;
   height: auto;
   padding-top: 0;
-  z-index: 9999;
 }
 
 .Drupal-specific ul.tabs.primary:hover:before {
@@ -3608,5 +3604,6 @@ div.ctools-modal-content .modal-content {
 .Drupal-specific ul.tabs.primary li.active a {
   background-color: rgb(15, 15, 15);
   color: #fff;
+  border-bottom-color: #fff;
 }
 

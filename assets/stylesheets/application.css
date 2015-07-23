@@ -3186,14 +3186,20 @@ div#panels-ipe-control-container {
   width: inherit;
   bottom: 0;
   right: 0;
-  background-color: inherit;
+  background-color: #fff;
   box-shadow: none;
+}
+
+div.ctools-modal-content .Form-item,
+div.panels-ipe-form-container .Form-item {
+  display: inline;
 }
 
 div.panels-ipe-pseudobutton-container,
 div.panels-ipe-control .panels-ipe-save,
 div.panels-ipe-control .panels-ipe-cancel,
-div.ctools-modal-content .Form-submit {
+div.ctools-modal-content .Form-submit,
+div.ctools-modal-content .Form-input--submit {
   background: inherit;
   background-color: #fff;
   border: 2px rgb(15, 15, 15) solid;
@@ -3404,8 +3410,8 @@ div.panels-ipe-handlebar-wrapper {
 }
 
 .panels-ipe-editing div.panels-ipe-portlet-wrapper:hover {
-  border: solid 2px #ff0;
-  margin: -2px;
+  outline: solid 2px #ff0;
+  border: 0;
 }
 
 .panels-ipe-dragbar-admin-title {
@@ -3414,8 +3420,8 @@ div.panels-ipe-handlebar-wrapper {
 }
 
 .panels-ipe-editing .panels-ipe-sort-container .ui-sortable-placeholder {
-  border: 2px solid #ff0;
-  margin: -2px;
+  outline: 2px solid #ff0;
+  border: 0;
   background-color: rgba(255,255,0,0.3);
   margin: 1em 0;
   border-radius: 0;
@@ -3508,8 +3514,8 @@ div.ctools-modal-content .modal-content {
 
 .js-Fedit {
   border: 0;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
+  -webkit-transition: background-color 0.25s;
+  transition: background-color 0.25s;
   border-radius: 0;
 }
 
@@ -3521,11 +3527,10 @@ div.ctools-modal-content .modal-content {
 }
 
 .js-Fedit:focus {
-  border: 1px solid #ff0;
-  padding: 2px;
-  margin: -3px;
+  outline: 1px solid #ff0;
+  border: 0;
   width: auto;
-  box-shadow: 0 0 10 px rgba(255,255,0,0.3);
+  box-shadow: 0 0 10px rgba(255,255,0,0.3);
   background-color: rgba(255,255,0,0.3);
 }
 

@@ -5,17 +5,11 @@
  */
 
 
-function frontend_ignore_customizations() {
-  return ((arg(0) == 'panels') && (arg(1) == 'ajax'));
-}
 
 /**
  * Implement theme_form().
  */
 function frontend_form($variables) {
-  if (frontend_ignore_customizations()) {
-    return theme_form($variables);
-  }
 
   $element = $variables['element'];
   if (isset($element ['#action'])) {
@@ -41,10 +35,6 @@ function frontend_form($variables) {
  * Implements theme_form_element().
  */
 function frontend_form_element($variables) {
-  if (frontend_ignore_customizations()) {
-    return theme_form_element($variables);
-  }
-
   $element = &$variables['element'];
 
   // This function is invoked as theme wrapper, but the rendered form element
@@ -163,9 +153,6 @@ function frontend_form_required_marker($variables) {
  * Implements theme_textfield().
  */
 function frontend_textfield($variables) {
-  if (frontend_ignore_customizations()) {
-    return theme_textfield($variables);
-  }
   $element = $variables ['element'];
   $element ['#attributes']['type'] = 'text';
   element_set_attributes($element, array('id', 'name', 'value', 'size', 'maxlength'));
@@ -194,9 +181,7 @@ function frontend_textfield($variables) {
  * Implements theme_password().
  */
 function frontend_password($variables) {
-  if (frontend_ignore_customizations()) {
-    return theme_password($variables);
-  }
+
   $element = $variables ['element'];
   $element ['#attributes']['type'] = 'password';
   element_set_attributes($element, array('id', 'name', 'size', 'maxlength'));
@@ -209,9 +194,7 @@ function frontend_password($variables) {
  * Implements theme_checkbox().
  */
 function frontend_checkbox($variables) {
-  if (frontend_ignore_customizations()) {
-    return theme_checkbox($variables);
-  }
+
   $element = $variables ['element'];
   $element ['#attributes']['type'] = 'checkbox';
   element_set_attributes($element, array('id', 'name', '#return_value' => 'value'));
@@ -229,9 +212,7 @@ function frontend_checkbox($variables) {
  * Implements theme_radio().
  */
 function frontend_radio($variables) {
-  if (frontend_ignore_customizations()) {
-    return theme_radio($variables);
-  }
+
   $element = $variables ['element'];
   $element ['#attributes']['type'] = 'radio';
   element_set_attributes($element, array('id', 'name', '#return_value' => 'value'));
@@ -259,9 +240,7 @@ function frontend_select($variables) {
  * Implements theme_textarea().
  */
 function frontend_textarea($variables) {
-  if (frontend_ignore_customizations()) {
-    return theme_textarea($variables);
-  }
+
   $element = $variables ['element'];
   element_set_attributes($element, array('id', 'name', 'cols', 'rows'));
   frontend_form_set_class($element, array('Form-input', 'Form-input--text', 'Form-input--textarea'));
@@ -286,9 +265,7 @@ function frontend_textarea($variables) {
  * Implements theme_button().
  */
 function frontend_button($variables) {
-  if (frontend_ignore_customizations()) {
-    return theme_button($variables);
-  }
+
   $element = $variables ['element'];
   $element ['#attributes']['type'] = 'submit';
   element_set_attributes($element, array('id', 'name', 'value'));
@@ -314,9 +291,7 @@ function frontend_button($variables) {
  * Implements theme_container().
  */
 function frontend_container($variables) {
-  if (frontend_ignore_customizations()) {
-    return theme_container($variables);
-  }
+
   $element = $variables ['element'];
   // Ensure #attributes is set.
   $element += array('#attributes' => array());

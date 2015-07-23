@@ -2,14 +2,20 @@ div#panels-ipe-control-container {
   width: inherit;
   bottom: 0;
   right: 0;
-  background-color: inherit;
+  background-color: #fff;
   box-shadow: none;
+}
+
+div.ctools-modal-content .Form-item,
+div.panels-ipe-form-container .Form-item {
+ display: inline;
 }
 
 div.panels-ipe-pseudobutton-container,
 div.panels-ipe-control .panels-ipe-save,
 div.panels-ipe-control .panels-ipe-cancel,
-div.ctools-modal-content .Form-submit {
+div.ctools-modal-content .Form-submit,
+div.ctools-modal-content .Form-input--submit {
   background: inherit;
   background-color: var(--buttonBackgroundColor);
   border: 2px var(--buttonTextColor) solid;
@@ -229,8 +235,8 @@ div.panels-ipe-handlebar-wrapper {
 }
 
 .panels-ipe-editing div.panels-ipe-portlet-wrapper:hover {
-  border: solid 2px var(--uiHilightColor);
-  margin: -2px;
+  outline: solid 2px var(--uiHilightColor);
+  border: 0;
 }
 
 .panels-ipe-dragbar-admin-title {
@@ -239,8 +245,8 @@ div.panels-ipe-handlebar-wrapper {
 }
 
 .panels-ipe-editing .panels-ipe-sort-container .ui-sortable-placeholder {
-  border: 2px solid var(--uiHilightColor);
-  margin: -2px;
+  outline: 2px solid var(--uiHilightColor);
+  border: 0;
   background-color: var(--uiHilightBackgroundColor);
   margin: 1em 0;
 	border-radius: 0;

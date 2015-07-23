@@ -354,3 +354,19 @@ function frontend_form_set_class(&$element, $class = array()) {
     $element['#attributes']['class'][] = 'is-failing';
   }
 }
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Hide elements from fpp form.
+ */
+function frontend_form_alter(&$form, &$form_state, $form_id) {
+  switch ($form_id) {
+    case 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form':
+      $form['title']['#title'] = t('Administrative title');
+      $form['reusable']['#access'] = FALSE;
+      $form['link']['#access'] = FALSE;
+      $form['view_mode']['#access'] = FALSE;
+      break;
+  }
+}

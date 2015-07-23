@@ -365,5 +365,20 @@ function frontend_form_alter(&$form, &$form_state, $form_id) {
       $form['link']['#access'] = FALSE;
       $form['view_mode']['#access'] = FALSE;
       break;
+
+    case 'ctools_node_content_type_edit_form':
+      $form['nid']['#title'] = t('Enter the title of an existing node to embed');
+      $form['nid']['#description'] = t('You can also search for an id');
+      $form['override_title']['#access'] = FALSE;
+      $form['override_title_text']['#access'] = FALSE;
+      $form['override_title_heading']['#access'] = FALSE;
+      $form['override_title_markup']['#access'] = FALSE;
+      $form['leave_node_title']['#default_value'] = TRUE;
+      $form['leave_node_title']['#access'] = FALSE;
+      $form['links']['#access'] = FALSE;
+      $form['build_mode']['#access'] = FALSE;
+      $form['identifier']['#access'] = FALSE;
+      $form['link_node_title']['#access'] = FALSE;
+      break;
   }
 }

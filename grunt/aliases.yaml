@@ -1,5 +1,5 @@
 default:
   - 'watch'
-
-test:
-  - suitcss:conformance
+dev:
+  - 'suitcss'
+  - 'componentbuild'

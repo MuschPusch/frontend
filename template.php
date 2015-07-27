@@ -16,3 +16,4 @@ require_once __DIR__ . '/includes/pager.inc';
 require_once __DIR__ . '/includes/theme.inc';
 require_once __DIR__ . '/includes/node.inc';
 require_once __DIR__ . '/includes/forms.inc';
+require_once __DIR__ . '/includes/field.inc';

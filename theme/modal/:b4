@@ -1,0 +1,12 @@
+
+.ctools-modal-content {
+  font-size: 12px;
+  border: solid 2px var(--modalBorderColor);
+  box-shadow: -1em 1em 1em rgba(var(--modalBackgroundColor), 0.5);
+  border-radius: 10px;
+}
+
+#modalBackdrop {
+  position: fixed!important;
+  background-color: var(--modalBackDropBackgroundColor) !important;
+}

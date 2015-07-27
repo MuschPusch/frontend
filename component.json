@@ -9,6 +9,7 @@
     "theme/fedit/fedit.css",
     "theme/navbar/navbar.css",
     "theme/tabs/tabs.css",
+    "theme/focal-point/focal-point.css",
     "index.css"
   ],
   "scripts": [

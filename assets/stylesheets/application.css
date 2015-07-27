@@ -3612,3 +3612,12 @@ div.ctools-modal-content .modal-content {
   border-bottom-color: #fff;
 }
 
+.image-preview .focal-point-wrapper {
+  width: auto;
+  height: auto;
+}
+
+.image-preview .focal-point-wrapper img {
+  position: static;
+}
+

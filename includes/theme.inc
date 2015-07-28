@@ -10,8 +10,12 @@
  * Return various tpl files.
  */
 function frontend_theme($existing, $type, $theme, $path) {
-  return array(
+  $theme_declaration = array();
+  $theme_declaration['panels_default_style_render_region'] = array(
+    'arguments' =>  array('display' => NULL, 'owner_id' => NULL, 'panes' => NULL, 'settings' => NULL, 'region_id' => NULL, 'style' => NULL),
+    'template' => 'templates/panelregions/panels-default-style-render-region'
   );
+  return $theme_declaration;
 }
 
 /**
@@ -70,4 +74,15 @@ function frontend_preprocess_html() {
     );
     drupal_add_js($settings, 'setting');
   }
+}
+
+
+/**
+ * Implements theme_preprocess().
+ */
+function frontend_preprocess_panels_default_style_render_region(&$vars) {
+  $display = $vars['display'];
+  $vars['theme_hook_suggestions'][] = 'panels_default_style_render_region';
+  $vars['theme_hook_suggestions'][] = 'panels_default_style_render_region__' . $display->layout;
+  $vars['theme_hook_suggestions'][] = 'panels_default_style_render_region__' . $display->layout . '__' . $vars['region_id'];
 }

@@ -77,12 +77,4 @@ function frontend_preprocess_html() {
 }
 
 
-/**
- * Implements theme_preprocess().
- */
-function frontend_preprocess_panels_default_style_render_region(&$vars) {
-  $display = $vars['display'];
-  $vars['theme_hook_suggestions'][] = 'panels_default_style_render_region';
-  $vars['theme_hook_suggestions'][] = 'panels_default_style_render_region__' . $display->layout;
-  $vars['theme_hook_suggestions'][] = 'panels_default_style_render_region__' . $display->layout . '__' . $vars['region_id'];
-}
+

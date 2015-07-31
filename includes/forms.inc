@@ -337,6 +337,17 @@ function frontend_form_set_class(&$element, $class = array()) {
  */
 function frontend_form_alter(&$form, &$form_state, $form_id) {
   switch ($form_id) {
+    case 'ctools_node_content_type_edit_form':
+      $form['override_title']['#access'] = FALSE;
+      $form['override_title_text']['#access'] = FALSE;
+      $form['override_title_heading']['#access'] = FALSE;
+      $form['override_title_markup']['#access'] = FALSE;
+      $form['leave_node_title']['#access'] = FALSE;
+      $form['link_node_title']['#access'] = FALSE;
+      $form['identifier']['#access'] = FALSE;
+      $form['links']['#access'] = FALSE;
+      $form['build_mode']['#access'] = FALSE;
+      break;
     case 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form':
       $form['title']['#title'] = t('Administrative title');
       $form['reusable']['#access'] = FALSE;

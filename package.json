@@ -1,24 +1,17 @@
 {
   "name": "frontend",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
   "dependencies": {
     "suitcss-preprocessor": "~0.4.0"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
-    "grunt-contrib-uglify": "^0.6.0",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-duojs": "~0.1.1",
-    "grunt-favicons": "^0.6.4",
     "grunt-suitcss": "~0.5.0",
     "grunt-webfont": "~0.5.1",
-    "load-grunt-config": "~0.13.2"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "BSD-2-Clause"
+    "load-grunt-config": "~0.13.2",
+    "grunt-component-build": "~0.5.3",
+    "grunt-scss-lint": "~0.3.3",
+    "grunt-svg-sprite": "~1.0.19"
+  }
 }

@@ -1,0 +1,29 @@
+{
+  "name": "frontend",
+  "description": "",
+  "repo": "factorial-io/frontend",
+  "version": "0.0.0",
+  "styles": [
+    "theme/panels/panels.css",
+    "theme/modal/modal.css",
+    "theme/fedit/fedit.css",
+    "theme/navbar/navbar.css",
+    "theme/tabs/tabs.css",
+    "theme/focal-point/focal-point.css",
+    "index.css"
+  ],
+  "scripts": [
+    "index.js"
+  ],
+  "paths": [
+    "components",
+    "components_local"
+  ],
+  "locals": [],
+  "dependencies": {
+    "FortAwesome/Font-Awesome": "*",
+    "suitcss/components-grid": "^2.0.2",
+    "suitcss/utils-size": "~0.7.2"
+  },
+  "license": "MIT"
+}

@@ -46,7 +46,7 @@ function frontend_preprocess_search_result(&$vars) {
 function frontend_preprocess_html() {
   global $user;
   if ($user->uid > 0) {
-    drupal_add_css(drupal_get_path('theme', 'frontend') . '/assets/stylesheets/application.css', array('group' => CSS_THEME, 'every_page' => TRUE));
+    drupal_add_css(drupal_get_path('theme', 'frontend') . '/assets/stylesheets/application.css', array('group' => CSS_THEME - 1, 'every_page' => TRUE));
     $settings = array(
       'CToolsModal' => array(
         'loadingText' => t('Loading...'),

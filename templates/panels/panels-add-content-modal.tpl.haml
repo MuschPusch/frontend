@@ -2,10 +2,15 @@
 .PanelsContentModal.PanelsContentModal--addContent.Grid.Grid--withGutter
   .PanelsSectionColumn.PanelsSectionColumn--categories.Grid-cell.u-size1of4
     .inside
+      %h4 
+        = t('New content')
+      = $fielded_pane_content
+      %h4
+        = t('Existing content')
+      = $root_content
       .PanelsCategories-box
         - foreach ($categories_array as $category)
           = $category
-      = $root_content
   .Grid-cell.u-size3of4
     = $messages
     - if (!empty($header))

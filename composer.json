@@ -4,7 +4,7 @@
     "type": "drupal-theme",
     "license": "GPL-2.0+",
     "require": {
-      "factorial-io/mtHaml": "master-dev",
-      "factorial-io/oxide": "master-dev"
+      "factorial-io/mtHaml": "dev-master",
+      "factorial-io/oxide": "dev-master"
     }
 }

@@ -338,6 +338,7 @@ function frontend_form_set_class(&$element, $class = array()) {
 function frontend_form_alter(&$form, &$form_state, $form_id) {
   switch ($form_id) {
     case 'ctools_node_content_type_edit_form':
+    case 'webform_panels_webform_panels_edit_form':
       $form['override_title']['#access'] = FALSE;
       $form['override_title_text']['#access'] = FALSE;
       $form['override_title_heading']['#access'] = FALSE;

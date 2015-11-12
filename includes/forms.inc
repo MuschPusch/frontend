@@ -254,8 +254,10 @@ function frontend_textarea($variables) {
   //   $wrapper_attributes ['class'][] = 'resizable';
   // }
   // $output = '<div' . drupal_attributes($wrapper_attributes) . '>';
-  $output .= '<textarea' . drupal_attributes($element['#attributes']) . '>' . check_plain($element['#value']) . '</textarea>';
+  // $output .= '<textarea' . drupal_attributes($element['#attributes']) . '>' . check_plain($element['#value']) . '</textarea>';
   // $output .= '</div>';
+
+  $output = '<textarea' . drupal_attributes($element['#attributes']) . '>' . check_plain($element['#value']) . '</textarea>';
   return $output;
 }
 

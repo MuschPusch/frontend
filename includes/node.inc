@@ -14,7 +14,7 @@ function frontend_preprocess_node(&$vars, $hook) {
 
   // Optionally, run node-type-specific preprocess functions, like
   // foo_preprocess_node_page() or foo_preprocess_node_story().
-  $function = __FUNCTION__ . '_' . $vars['node']->type;
+  $function = __FUNCTION__ . '_' . str_replace('-', '_', $vars['node']->type);
   if (function_exists($function)) {
     $function($vars, $hook);
   }

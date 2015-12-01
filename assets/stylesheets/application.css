@@ -3226,113 +3226,6 @@ div.panels-ipe-placeholder h3 {
   width: 75%;
 }
 
-div.ctools-modal-content {
-  margin: 0;
-  border: 0;
-  box-shadow: none;
-  border-radius: 0;
-  background: transparent;
-}
-
-#modalBackdrop {
-  position: fixed!important;
-  background-color: rgba(0, 0, 0, .75) !important;
-}
-
-div.ctools-modal-content .modal-header {
-  padding: 0;
-  margin-bottom: 10px;
-  background: none;
-  border-radius: 0;
-}
-
-div.ctools-modal-content .modal-title {
-  font-size: 22px;
-  color: #fff;
-  text-shadow: None;
-}
-
-div.ctools-modal-content .Form-description {
-  font-size: 12px;
-}
-
-div.ctools-modal-content a.close {
-  box-sizing: border-box;
-  position: absolute;
-  display: block;
-  right: 0;
-  top: 0;
-  background: none;
-  color: #fff;
-  font-size: 0;
-  overflow: hidden;
-  text-decoration: none;
-}
-
-div.ctools-modal-content a.close:hover {
-  color: #ce0000;
-}
-
-div.ctools-modal-content a.close:before {
-  display: block;
-  content: "\f00d";
-  line-height: 26px;
-  font-family: FontAwesome;
-  font-size: 26px;
-}
-
-div.ctools-modal-content a.close img {
-  display: none;
-}
-
-div.ctools-modal-content .modal-content {
-  padding: 20px;
-  margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  background-color: #fff;
-  width: 100% !important;
-  border-radius: 5px;
-}
-
-div.ctools-modal-content fieldset {
-  clear: none;
-  width: auto;
-  position: relative;
-  top: 12px;
-  /* Offsets the negative margin of legends */
-  margin-top: 10px;
-  margin-bottom: 32px;
-  background: #FFFFFF;
-  border: 1px solid #CCCCCC;
-  border-radius: 3px 0px;
-  padding: 0 0 10px;
-}
-
-div.ctools-modal-content fieldset legend {
-  background: #dbdbdb;
-  border: 1px solid #ccc;
-  border-bottom: none;
-  color: #3b3b3b;
-  display: block;
-  height: 2em;
-  left: -1px;
-  /* LTR */
-  line-height: 2;
-  padding: 1px 0 0;
-  position: absolute;
-  text-indent: 10px;
-  text-shadow: 0 1px 0 #fff;
-  top: -12px;
-  width: 100%;
-  border-radius: 3px 0px;
-}
-
-div.ctools-modal-content .fieldset-wrapper {
-  padding: 0 10px;
-  margin-top: 2.25em;
-}
-
 .js-Fedit {
   border: 0;
   -webkit-transition: background-color 0.25s;
@@ -3442,10 +3335,8 @@ div.ctools-modal-content .fieldset-wrapper {
   position: static;
 }
 
+
 /*
-@custom-media --sm-viewport (min-width: 768px);
-@custom-media --md-viewport (min-width: 1024px);
-@custom-media --lg-viewport (min-width: 1280px);
-@custom-media --retina only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx), only screen and (-webkit-min-device-pixel-ratio: 2);
-*/
+ * Modal
+ */
 

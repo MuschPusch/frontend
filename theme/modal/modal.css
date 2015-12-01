@@ -1,36 +1,90 @@
+/*
+ * Modal
+ */
+
+#modalBackdrop {
+  position: fixed !important;
+  background-color: var(--modalBackDropBackgroundColor) !important;
+}
+
+.modal-default {
+  width: 85.42%;
+  max-width: 1230px;
+  max-height: calc(100% - 30px);
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+
+div.ctools-modal-content {
+  width: 100% !important;
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+div.ctools-modal-content .modal-header {
+  padding: 0;
+  background: none;
+}
+
+div.ctools-modal-content .modal-title {
+  text-shadow: none;
+  color: #fff;
+}
+
+div.ctools-modal-content a.close {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 15px;
+  background: none;
+  color: #646464;
+  text-decoration: none;
+  outline: 0;
+  line-height: 1;
+  font-size: 0;
+}
+
+div.ctools-modal-content a.close:before {
+  display: block;
+  content: "\f00d";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 20px;
+  text-align: center;
+  top: 0;
+  left: 0;
+  color: var(--modalBackgroundColor);
+  font-family: var(--uiIconFont);
+  font-size: var(--uiIconFontSize);
+}
+
+div.ctools-modal-content a.close:hover:before {
+  color: #C7C7C7;
+}
 
 
+div.ctools-modal-content .modal-content {
+  width: 100% !important;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+
+
+/*
 div.ctools-modal-content {
   font-size: 12px;
   border: solid 2px var(--modalBorderColor);
   box-shadow: -1em 1em 1em rgba(var(--modalBackDropBackgroundColor), 0.5);
   border-radius: 10px;
   background: transparent;
-  background: transparent;
-  background: transparent;
-}
-
-#modalBackdrop {
-  position: fixed!important;
-  background-color: var(--modalBackDropBackgroundColor) !important;
-}
-
-div.ctools-modal-content .modal-header {
-  padding: 20px 20px 4px 20px;
-  background: none;
-  background-Color: var(--modalTextColor);
-  position: relative;
-}
-
-div.ctools-modal-content .modal-title {
-  font-family: var(--uiFont);
-  font-size: var(--uiFontSize--md);
-  color: var(--modalBackgroundColor);
-  text-shadow: None;
-}
-
-div.ctools-modal-content .Form-description {
-  font-size: var(--uiFontSize--sm);
 }
 
 div.ctools-modal-content a.close {
@@ -55,26 +109,6 @@ div.ctools-modal-content a.close:hover:before {
   color: var(--modalTextColor);
 }
 
-div.ctools-modal-content a.close:before {
-  display: block;
-  content: "\f00d";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  line-height: 20px;
-  text-align: center;
-  top: 0;
-  left: 0;
-  color: var(--modalBackgroundColor);
-  font-family: var(--uiIconFont);
-  font-size: var(--uiFontSize--md);
-}
-
-div.ctools-modal-content a.close img {
-  display: none;
-}
-
-
 div.ctools-modal-content .modal-content {
   padding: 20px;
   margin: 0;
@@ -88,45 +122,4 @@ div.ctools-modal-content .modal-content {
   width: 100% !important;
   border-radius: 5px;
 }
-
-div.ctools-modal-content fieldset{
-  clear: none;
-  width: auto;
-  position: relative;
-  top: 12px; /* Offsets the negative margin of legends */
-  margin-top: 10px;
-  margin-bottom: 32px;
-  background: #FFFFFF;
-  border: 1px solid #CCCCCC;
-  border-radius: 3px 0px;
-  padding: 0 0 10px;
-}
-
-div.ctools-modal-content .form-item label {
-  width: 100%;
-  float: none;
-  clear: both;
-}
-
-div.ctools-modal-content fieldset legend {
-  background: #dbdbdb;
-  border: 1px solid #ccc;
-  border-bottom: none;
-  color: #3b3b3b;
-  display: block;
-  height: 2em;
-  left: -1px; /* LTR */
-  line-height: 2;
-  padding: 1px 0 0;
-  position: absolute;
-  text-indent: 10px;
-  text-shadow: 0 1px 0 #fff;
-  top: -12px;
-  width: 100%;
-  border-radius: 3px 0px;
-}
-
-div.ctools-modal-content .fieldset-wrapper {
-  padding: 0 10px;
-  margin-top: 2.25em;
-}
+*/

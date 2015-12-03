@@ -16,6 +16,12 @@
   transform: translate(-50%, -50%);
 }
 
+@media (--lg-viewport) {
+  .modal-default {
+    position: fixed !important;
+  }
+}
+
 div.ctools-modal-content {
   width: 100% !important;
   margin: 0;

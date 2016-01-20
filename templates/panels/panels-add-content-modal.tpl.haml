@@ -6,18 +6,26 @@
         %h4 
           = t('New content')
         = $fielded_pane_content
+      .PanelsCategories-box
+        - foreach ($categories_array as $category)
+          = $category
+  .PanelsSectionColumn.PanelsSectionColumn--categories.Grid-cell.u-size1of4
+    .inside
       - if (!empty($root_content))
         %h4
           = t('Existing content')
         = $root_content
-      .PanelsCategories-box
-        - foreach ($categories_array as $category)
-          = $category
-  .Grid-cell.u-size3of4
+  .Grid-cell.u-size2of4
     = $messages
-    - if (!empty($header))
-      .PanelsCategories-description
-        = $header
+    %h4
+      = t('Help')
+    - if (!empty($help))
+
+      .Arrange.Arrange--withGutter
+        .Arrange-sizeFit
+          %img(src=$layout_icon)
+        .Arrange-sizeFill.PanelsCategories-description
+          = $help
 
     - if (!empty($columns))
       .PanelsSectionColumns

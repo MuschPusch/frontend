@@ -41,7 +41,8 @@ function frontend_preprocess_panels_add_content_modal(&$vars) {
   $vars['fielded_pane_content'] = '';
 
   $vars['layout_icon'] = $base_url . '/' . $vars['renderer']->display->allowed_layouts['frontpage']['path'] . '/' . $vars['renderer']->display->allowed_layouts['frontpage']['icon'];
-  $vars['help'] = t('You are currently editing the %layout layout. Please add new or existing content to this region.', array('%layout' => $vars['renderer']->plugins['layout']['title']));
+  $vars['help'] = t('You are currently editing the %region region of the %layout layout. Please add new or existing content.', array('%region' => $vars['region'], '%layout' => $vars['renderer']->plugins['layout']['title']));
+
   if (!empty($vars['categories'][t('fielded-panes')])) {
     sort($vars['categories'][t('fielded-panes')]['content']);
     foreach ($vars['categories'][t('fielded-panes')]['content'] as $content_type) {
@@ -108,7 +109,11 @@ function frontend_preprocess_panels_add_content_modal(&$vars) {
   // Now render the top level buttons (aka the root category) if any.
   if (!empty($vars['categories']['root'])) {
     foreach ($vars['categories']['root']['content'] as $content_type) {
-      $vars['root_content'] .= theme('panels_add_content_link', array('renderer' => $vars['renderer'], 'region' => $vars['region'], 'content_type' => $content_type));
+      $vars['root_content'] .= theme('panels_add_content_link', array(
+        'renderer' => $vars['renderer'],
+        'region' => $vars['region'],
+        'content_type' => $content_type)
+      );
     }
   }
 }

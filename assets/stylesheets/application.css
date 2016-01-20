@@ -1,5 +1,5 @@
 /*!
- *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 
@@ -8,12 +8,8 @@
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/fontawesome-webfont.woff2') format('woff2'),
-       url('../fonts/fontawesome-webfont.woff') format('woff'),
-       url('../fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'),
-       url('../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+  src: url('../fonts/fontawesome-webfont.eot?v=4.5.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.5.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.5.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.5.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -2657,6 +2653,86 @@
   content: "\f280";
 }
 
+.fa-reddit-alien:before {
+  content: "\f281";
+}
+
+.fa-edge:before {
+  content: "\f282";
+}
+
+.fa-credit-card-alt:before {
+  content: "\f283";
+}
+
+.fa-codiepie:before {
+  content: "\f284";
+}
+
+.fa-modx:before {
+  content: "\f285";
+}
+
+.fa-fort-awesome:before {
+  content: "\f286";
+}
+
+.fa-usb:before {
+  content: "\f287";
+}
+
+.fa-product-hunt:before {
+  content: "\f288";
+}
+
+.fa-mixcloud:before {
+  content: "\f289";
+}
+
+.fa-scribd:before {
+  content: "\f28a";
+}
+
+.fa-pause-circle:before {
+  content: "\f28b";
+}
+
+.fa-pause-circle-o:before {
+  content: "\f28c";
+}
+
+.fa-stop-circle:before {
+  content: "\f28d";
+}
+
+.fa-stop-circle-o:before {
+  content: "\f28e";
+}
+
+.fa-shopping-bag:before {
+  content: "\f290";
+}
+
+.fa-shopping-basket:before {
+  content: "\f291";
+}
+
+.fa-hashtag:before {
+  content: "\f292";
+}
+
+.fa-bluetooth:before {
+  content: "\f293";
+}
+
+.fa-bluetooth-b:before {
+  content: "\f294";
+}
+
+.fa-percent:before {
+  content: "\f295";
+}
+
 /** @define Grid; use strict */
 
 
@@ -3227,27 +3303,30 @@ div.panels-ipe-placeholder h3 {
 }
 
 div.ctools-modal-content {
-  margin: 0;
-  border: 0;
-  box-shadow: none;
-  border-radius: 0;
+  font-size: 12px;
+  border: solid 2px rgb(15, 15, 15);
+  box-shadow: -1em 1em 1em rgba(rgb(15, 15, 15), 0.5);
+  border-radius: 10px;
+  background: transparent;
+  background: transparent;
   background: transparent;
 }
 
 #modalBackdrop {
   position: fixed!important;
-  background-color: rgba(0, 0, 0, .75) !important;
+  background-color: rgb(15, 15, 15) !important;
 }
 
 div.ctools-modal-content .modal-header {
-  padding: 0;
-  margin-bottom: 10px;
+  padding: 20px 20px 4px 20px;
   background: none;
-  border-radius: 0;
+  background-Color: rgb(15, 15, 15);
+  position: relative;
 }
 
 div.ctools-modal-content .modal-title {
-  font-size: 22px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
   color: #fff;
   text-shadow: None;
 }
@@ -3258,27 +3337,39 @@ div.ctools-modal-content .Form-description {
 
 div.ctools-modal-content a.close {
   box-sizing: border-box;
+  font-size: 0;
   position: absolute;
   display: block;
-  right: 0;
-  top: 0;
+  width: 26px;
+  height: 26px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  right: 20px;
+  top: 10px;
   background: none;
   color: #fff;
-  font-size: 0;
   overflow: hidden;
-  text-decoration: none;
 }
 
-div.ctools-modal-content a.close:hover {
-  color: #ce0000;
+div.ctools-modal-content a.close:hover,
+div.ctools-modal-content a.close:hover:before {
+  background-color: #fff;
+  color: rgb(15, 15, 15);
 }
 
 div.ctools-modal-content a.close:before {
   display: block;
   content: "\f00d";
-  line-height: 26px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 20px;
+  text-align: center;
+  top: 0;
+  left: 0;
+  color: #fff;
   font-family: FontAwesome;
-  font-size: 26px;
+  font-size: 16px;
 }
 
 div.ctools-modal-content a.close img {
@@ -3286,6 +3377,10 @@ div.ctools-modal-content a.close img {
 }
 
 div.ctools-modal-content .modal-content {
+  padding: 20px;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
   padding: 20px;
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
@@ -3307,6 +3402,12 @@ div.ctools-modal-content fieldset {
   border: 1px solid #CCCCCC;
   border-radius: 3px 0px;
   padding: 0 0 10px;
+}
+
+div.ctools-modal-content .form-item label {
+  width: 100%;
+  float: none;
+  clear: both;
 }
 
 div.ctools-modal-content fieldset legend {
@@ -3331,6 +3432,10 @@ div.ctools-modal-content fieldset legend {
 div.ctools-modal-content .fieldset-wrapper {
   padding: 0 10px;
   margin-top: 2.25em;
+}
+
+div.ctools-modal-content .Form-actions {
+  padding-top: 30px;
 }
 
 .js-Fedit {

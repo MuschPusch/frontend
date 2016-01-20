@@ -130,3 +130,7 @@ div.ctools-modal-content .fieldset-wrapper {
   padding: 0 10px;
   margin-top: 2.25em;
 }
+
+div.ctools-modal-content .Form-actions {
+  padding-top: 30px;
+}

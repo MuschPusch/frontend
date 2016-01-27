@@ -131,7 +131,7 @@ function frontend_panels_ipe_pane_wrapper($vars) {
   );
 
   $type = ctools_get_content_type($pane->type);
-  $title ='<span class = "panels-ipe-dragbar-admin-title">huhu' . ctools_content_admin_title($type, $pane->subtype, $pane->configuration, $display->context) . '</span>';
+  $title ='<span class = "panels-ipe-dragbar-admin-title">' . ctools_content_admin_title($type, $pane->subtype, $pane->configuration, $display->context) . '</span>';
 
   $links = theme('links', array('links' => $vars['links'], 'attributes' => $attributes));
 

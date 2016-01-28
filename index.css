@@ -12,7 +12,7 @@
   --uiFontSize--md: 16px;
   --uiFontSize--sm: 12px;
   --uiIconFont: FontAwesome;
-  --uiIconFontSize: 16px;
+  --uiIconFontSize: 22px;
 
   --uiHilightBackgroundColor: rgba(255,255,0,0.3);
   --uiHilightColor: #ff0;
@@ -26,9 +26,7 @@
   --buttonTextColor: rgb(15, 15, 15);
   --buttonTextColorHover: #fff;
 
-  --modalBorderColor: rgb(15, 15, 15);
-  --modalBackDropBackgroundColor: rgb(15, 15, 15);
+  --modalBackDropBackgroundColor: rgba(0, 0, 0, .8);
   --modalTextColor: rgb(15, 15, 15);
   --modalBackgroundColor: #fff;
 }
-

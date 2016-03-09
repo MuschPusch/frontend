@@ -354,6 +354,8 @@ function frontend_form_alter(&$form, &$form_state, $form_id) {
     case 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form':
       $form['title']['#title'] = t('Administrative title');
       $form['reusable']['#access'] = FALSE;
+      $form['redirect']['#access'] = FALSE;
+      $form['revision']['#access'] = FALSE;
       $form['link']['#access'] = FALSE;
       $form['view_mode']['#access'] = FALSE;
       break;

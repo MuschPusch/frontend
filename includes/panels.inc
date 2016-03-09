@@ -35,16 +35,22 @@ function frontend_preprocess_panels_pane(&$vars) {
  */
 function frontend_preprocess_panels_add_content_modal(&$vars) {
 
+  global $base_url;
   // Now render the top level buttons (aka the root category) if any.
   $vars['root_content'] = '';
   $vars['fielded_pane_content'] = '';
+
+  $vars['layout_icon'] = $base_url . '/' . $vars['renderer']->display->allowed_layouts['frontpage']['path'] . '/' . $vars['renderer']->display->allowed_layouts['frontpage']['icon'];
+  $vars['help'] = t('You are currently editing the %region region of the %layout layout. Please add new or existing content.', array('%region' => $vars['region'], '%layout' => $vars['renderer']->plugins['layout']['title']));
+
   if (!empty($vars['categories'][t('fielded-panes')])) {
+    sort($vars['categories'][t('fielded-panes')]['content']);
     foreach ($vars['categories'][t('fielded-panes')]['content'] as $content_type) {
       $vars['fielded_pane_content'] .= theme('panels_add_content_link', array(
         'renderer' => $vars['renderer'],
         'region' => $vars['region'],
-        'content_type' => $content_type)
-      );
+        'content_type' => $content_type
+      ));
     }
 
     // Unset categories link.
@@ -56,10 +62,10 @@ function frontend_preprocess_panels_add_content_modal(&$vars) {
   }
   unset($vars['categories']['fielded-panes']);
 
-  // Merge all items to others if only 1 exists.
+  // Merge all items to others if only 4 or less exists.
   foreach ($vars['categories'] as $root_key => $category) {
     // Less then three items get merged in custom.
-    if (count($category['content']) < 3) {
+    if (count($category['content']) < 8) {
       foreach ($category['content'] as $content_type) {
         $vars['root_content'] .= theme('panels_add_content_link', array(
           'renderer' => $vars['renderer'],
@@ -103,7 +109,42 @@ function frontend_preprocess_panels_add_content_modal(&$vars) {
   // Now render the top level buttons (aka the root category) if any.
   if (!empty($vars['categories']['root'])) {
     foreach ($vars['categories']['root']['content'] as $content_type) {
-      $vars['root_content'] .= theme('panels_add_content_link', array('renderer' => $vars['renderer'], 'region' => $vars['region'], 'content_type' => $content_type));
+      $vars['root_content'] .= theme('panels_add_content_link', array(
+        'renderer' => $vars['renderer'],
+        'region' => $vars['region'],
+        'content_type' => $content_type)
+      );
     }
   }
 }
+
+/**
+ * Overwrites theme_panels_ipe_pane_wrapper().
+ */
+function frontend_panels_ipe_pane_wrapper($vars) {
+  $output = $vars['output'];
+  $pane = $vars['pane'];
+  $display = $vars['display'];
+
+  $attributes = array(
+    'class' => 'panels-ipe-linkbar',
+  );
+
+  $type = ctools_get_content_type($pane->type);
+  $title ='<span class = "panels-ipe-dragbar-admin-title">' . ctools_content_admin_title($type, $pane->subtype, $pane->configuration, $display->context) . '</span>';
+
+  $links = theme('links', array('links' => $vars['links'], 'attributes' => $attributes));
+
+  if (!empty($pane->locks['type']) && $pane->locks['type'] == 'immovable') {
+    $links = '<div class="panels-ipe-dragbar panels-ipe-nodraghandle clearfix">' . $links .$title .'</div>';
+  }
+  else {
+    $links = '<div class="panels-ipe-dragbar panels-ipe-draghandle clearfix">' . $links . $title . '<span class="panels-ipe-draghandle-icon"><span class="panels-ipe-draghandle-icon-inner"></span></span></div>';
+  }
+
+  $handlebar = '<div class="panels-ipe-handlebar-wrapper panels-ipe-on">' . $links . '</div>';
+
+  return $handlebar . $output;
+}
+
+

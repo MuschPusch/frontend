@@ -114,7 +114,6 @@ function frontend_preprocess_panels_add_content_modal(&$vars) {
       );
     }
   }
-  dsm($vars);
 }
 
 /**

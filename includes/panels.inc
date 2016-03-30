@@ -36,13 +36,14 @@ function frontend_preprocess_panels_pane(&$vars) {
 function frontend_preprocess_panels_add_content_modal(&$vars) {
 
   global $base_url;
-  // Now render the top level buttons (aka the root category) if any.
   $vars['root_content'] = '';
   $vars['fielded_pane_content'] = '';
 
   $vars['layout_icon'] = $base_url . '/' . $vars['renderer']->display->allowed_layouts['frontpage']['path'] . '/' . $vars['renderer']->display->allowed_layouts['frontpage']['icon'];
   $vars['help'] = t('You are currently editing the %region region of the %layout layout. Please add new or existing content.', array('%region' => $vars['region'], '%layout' => $vars['renderer']->plugins['layout']['title']));
 
+  dsm($vars);
+  // Now render the top level buttons (aka the root category) if any.
   if (!empty($vars['categories'][t('fielded-panes')])) {
     sort($vars['categories'][t('fielded-panes')]['content']);
     foreach ($vars['categories'][t('fielded-panes')]['content'] as $content_type) {
@@ -62,30 +63,27 @@ function frontend_preprocess_panels_add_content_modal(&$vars) {
   }
   unset($vars['categories']['fielded-panes']);
 
-  // Merge all items to others if only 4 or less exists.
+  // Merge all items to others except fielded panes
   foreach ($vars['categories'] as $root_key => $category) {
-    // Less then three items get merged in custom.
-    if (count($category['content']) < 8) {
-      foreach ($category['content'] as $content_type) {
-        $vars['root_content'] .= theme('panels_add_content_link', array(
-          'renderer' => $vars['renderer'],
-          'region' => $vars['region'],
-          'content_type' => $content_type)
-        );
-      }
+    foreach ($category['content'] as $content_type) {
+      $vars['root_content'] .= theme('panels_add_content_link', array(
+        'renderer' => $vars['renderer'],
+        'region' => $vars['region'],
+        'content_type' => $content_type)
+      );
+    }
 
-      // Unset categories link.
-      foreach ($vars['categories_array'] as $key => $cat) {
-        if (strpos($cat, $category['title'])) {
-          unset($vars['categories_array'][$key]);
-        }
+    // Unset categories link.
+    foreach ($vars['categories_array'] as $key => $cat) {
+      if (strpos($cat, $category['title'])) {
+        unset($vars['categories_array'][$key]);
       }
-      unset($vars['categories'][$root_key]);
+    }
+    unset($vars['categories'][$root_key]);
 
-      // In case no root item existed.
-      if (empty($vars['categories']['root'])) {
-        $vars['categories']['root'] = TRUE;
-      }
+    // In case no root item existed.
+    if (empty($vars['categories']['root'])) {
+      $vars['categories']['root'] = TRUE;
     }
   }
 
@@ -116,6 +114,7 @@ function frontend_preprocess_panels_add_content_modal(&$vars) {
       );
     }
   }
+  dsm($vars);
 }
 
 /**

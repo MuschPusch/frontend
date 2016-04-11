@@ -1,3 +1,8 @@
+div.ctools-modal-content,
+div.panels-ipe-control {
+  font-family: sans-serif;
+}
+
 div#panels-ipe-control-container {
   width: inherit;
   bottom: 0;

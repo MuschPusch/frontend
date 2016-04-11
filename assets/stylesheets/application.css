@@ -1,5 +1,5 @@
 /*!
- *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 
@@ -8,12 +8,8 @@
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/fontawesome-webfont.woff2') format('woff2'),
-       url('../fonts/fontawesome-webfont.woff') format('woff'),
-       url('../fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'),
-       url('../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+  src: url('../fonts/fontawesome-webfont.eot?v=4.5.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.5.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.5.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.5.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -2657,6 +2653,86 @@
   content: "\f280";
 }
 
+.fa-reddit-alien:before {
+  content: "\f281";
+}
+
+.fa-edge:before {
+  content: "\f282";
+}
+
+.fa-credit-card-alt:before {
+  content: "\f283";
+}
+
+.fa-codiepie:before {
+  content: "\f284";
+}
+
+.fa-modx:before {
+  content: "\f285";
+}
+
+.fa-fort-awesome:before {
+  content: "\f286";
+}
+
+.fa-usb:before {
+  content: "\f287";
+}
+
+.fa-product-hunt:before {
+  content: "\f288";
+}
+
+.fa-mixcloud:before {
+  content: "\f289";
+}
+
+.fa-scribd:before {
+  content: "\f28a";
+}
+
+.fa-pause-circle:before {
+  content: "\f28b";
+}
+
+.fa-pause-circle-o:before {
+  content: "\f28c";
+}
+
+.fa-stop-circle:before {
+  content: "\f28d";
+}
+
+.fa-stop-circle-o:before {
+  content: "\f28e";
+}
+
+.fa-shopping-bag:before {
+  content: "\f290";
+}
+
+.fa-shopping-basket:before {
+  content: "\f291";
+}
+
+.fa-hashtag:before {
+  content: "\f292";
+}
+
+.fa-bluetooth:before {
+  content: "\f293";
+}
+
+.fa-bluetooth-b:before {
+  content: "\f294";
+}
+
+.fa-percent:before {
+  content: "\f295";
+}
+
 /** @define Grid; use strict */
 
 
@@ -2970,6 +3046,11 @@
  * Size: breakpoint 3 (large)
  */
 
+div.ctools-modal-content,
+div.panels-ipe-control {
+  font-family: sans-serif;
+}
+
 div#panels-ipe-control-container {
   width: inherit;
   bottom: 0;
@@ -3226,6 +3307,168 @@ div.panels-ipe-placeholder h3 {
   width: 75%;
 }
 
+/*
+ * Float check boxes to the left.
+ */
+
+div.ctools-modal-content .Form-item--checkbox,
+div.panels-ipe-control .Form-item--checkbox {
+  display: block;
+  overflow: hidden;
+}
+
+div.ctools-modal-content .Form-wrapInput--checkbox,
+div.panels-ipe-control .Form-wrapInput--checkbox {
+  float: left;
+  margin-right: .5em;
+}
+
+div.ctools-modal-content .Form-item--checkbox label:last-child,
+div.panels-ipe-control .Form-item--checkbox label:last-child {
+  float: left;
+}
+
+div.panels-ipe-control .Form-item--checkbox {
+  margin: 0 10px 0 10px;
+}
+
+/*
+ * 1. Make descriptions smaller.
+ *
+ * NB: .focal-point-help duplicates .Form-item-description
+ */
+
+div.ctools-modal-content .Form-item-description,
+div.ctools-modal-content .focal-point-help {
+  font-size: .75em;
+  /* 1. */
+}
+
+/*
+ * Modal
+ */
+
+#modalBackdrop {
+  position: fixed !important;
+  background-color: rgba(0, 0, 0, .8) !important;
+}
+
+.modal-default {
+  width: 85.42%;
+  max-width: 1230px;
+  max-height: calc(100% - 30px);
+  top: 50% !important;
+  left: 50% !important;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+div.ctools-modal-content {
+  width: 100% !important;
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+div.ctools-modal-content .modal-header {
+  padding: 0;
+  background: none;
+}
+
+div.ctools-modal-content .modal-title {
+  text-shadow: none;
+  color: #fff;
+}
+
+div.ctools-modal-content a.close {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 18px;
+  background: none;
+  color: #646464;
+  text-decoration: none;
+  outline: 0;
+  line-height: 1;
+  font-size: 0;
+}
+
+div.ctools-modal-content a.close:before {
+  display: block;
+  content: "\f00d";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 20px;
+  text-align: center;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-family: FontAwesome;
+  font-size: 16px;
+}
+
+div.ctools-modal-content a.close:hover:before {
+  color: #C7C7C7;
+}
+
+div.ctools-modal-content .modal-content {
+  width: 100% !important;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/*
+div.ctools-modal-content {
+  font-size: 12px;
+  border: solid 2px var(--modalBorderColor);
+  box-shadow: -1em 1em 1em rgba(var(--modalBackDropBackgroundColor), 0.5);
+  border-radius: 10px;
+  background: transparent;
+}
+
+div.ctools-modal-content a.close {
+  box-sizing: border-box;
+  font-size:0;
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border: 2px solid var(--modalBackgroundColor);
+  border-radius: 20px;
+  right: 20px;
+  top: 10px;
+  background: none;
+  color: var(--modalBackgroundColor);
+  overflow: hidden;
+}
+
+div.ctools-modal-content a.close:hover,
+div.ctools-modal-content a.close:hover:before {
+  background-color: var(--modalBackgroundColor);
+  color: var(--modalTextColor);
+}
+
+div.ctools-modal-content .modal-content {
+  padding: 20px;
+  margin: 0;
+  font-family: var(--uiFont);
+  font-size: var(--uiFontSize--md);
+  padding: 20px;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background-color: #fff;
+  width: 100% !important;
+  border-radius: 5px;
+}
+*/
+
 .js-Fedit {
   border: 0;
   -webkit-transition: background-color 0.25s;
@@ -3335,8 +3578,10 @@ div.panels-ipe-placeholder h3 {
   position: static;
 }
 
-
 /*
- * Modal
- */
+@custom-media --sm-viewport (min-width: 768px);
+@custom-media --md-viewport (min-width: 1024px);
+@custom-media --lg-viewport (min-width: 1280px);
+@custom-media --retina only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx), only screen and (-webkit-min-device-pixel-ratio: 2);
+*/
 

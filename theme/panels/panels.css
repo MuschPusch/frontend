@@ -258,3 +258,39 @@ div.panels-ipe-placeholder h3 {
   padding-left: 20px;
   width: 75%;
 }
+
+/*
+ * Float check boxes to the left.
+ */
+
+div.ctools-modal-content .Form-item--checkbox,
+div.panels-ipe-control .Form-item--checkbox {
+  display: block;
+  overflow: hidden;
+}
+
+div.ctools-modal-content .Form-wrapInput--checkbox,
+div.panels-ipe-control .Form-wrapInput--checkbox {
+  float: left;
+  margin-right: .5em;
+}
+
+div.ctools-modal-content .Form-item--checkbox label:last-child,
+div.panels-ipe-control .Form-item--checkbox label:last-child {
+  float: left;
+}
+
+div.panels-ipe-control .Form-item--checkbox {
+  margin: 0 10px 0 10px;
+}
+
+/*
+ * 1. Make descriptions smaller.
+ *
+ * NB: .focal-point-help duplicates .Form-item-description
+ */
+
+div.ctools-modal-content .Form-item-description,
+div.ctools-modal-content .focal-point-help {
+  font-size: .75em; /* 1. */
+}

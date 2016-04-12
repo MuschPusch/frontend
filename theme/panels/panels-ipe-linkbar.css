@@ -51,11 +51,17 @@ ul.panels-ipe-linkbar li.delete a:before {
   content: "\f014";
 }
 
-ul.panels-ipe-linkbar li a:hover {
+ul.panels-ipe-linkbar li a:hover,
+ul.panels-ipe-linkbar li a:focus {
   background: none;
-  background-color: var(--buttonTextColor);
-  color: var(--buttonBackgroundColor);
-  border-color: var(--buttonBackgroundColor);
+  border-color: var(--uiColorSecondaryHighlight);
+}
+
+ul.panels-ipe-linkbar li a:active,
+ul.panels-ipe-linkbar li a:focus {
+  background-color: var(--uiColorSecondaryHighlight);
+  color: var(--uiLinkColorHover);
+  border-color: var(--uiColorSecondaryHighlight);
 }
 
 /*
@@ -86,8 +92,33 @@ div.panels-ipe-newblock a span {
 
 /*
  * Button group
+ *
+ * TODO: border z-index at hover state.
  */
 
+div.panels-ipe-handlebar-wrapper li.first > a {
+  border-color: var(--uiColorPrimary);
+  color: var(--uiColorPrimary);
+  background-color: transparent;
+}
+
+div.panels-ipe-handlebar-wrapper li.first > a:hover,
+div.panels-ipe-handlebar-wrapper li.first > a:focus {
+  color: var(--uiColorPrimaryHighlight);
+}
+
+div.panels-ipe-handlebar-wrapper li.first > a:active,
+div.panels-ipe-handlebar-wrapper li.first > a:focus {
+  background-color: var(--uiColorPrimaryHighlight);
+  color: var(--uiLinkColorHover);
+  border-color: var(--uiColorPrimaryHighlight);
+}
+
+div.panels-ipe-handlebar-wrapper li {
+  margin: 0 .25em 0 0;
+}
+
+/*
 div.panels-ipe-handlebar-wrapper li {
   margin: 0;
 }

@@ -15,6 +15,7 @@ div.panels-ipe-pseudobutton-container:focus {
 
 
 div.panels-ipe-pseudobutton-container:first-child {
+  border-color: var(--uiColorPrimary);
   color: var(--uiColorPrimary);
   background-color: transparent;
 }
@@ -41,18 +42,14 @@ div.panels-ipe-pseudobutton-container:not(:first-child) {
   color: var(--uiLinkColor);
 }
 
-/*
- * 1. REVIEW: border color on focus state.
- */
-
 div.panels-ipe-pseudobutton-container:not(:first-child):hover,
 div.panels-ipe-pseudobutton-container:not(:first-child):focus {
-  border-color: var(--uiColorSecondaryHighlight); /* 1. */
+  border-color: var(--uiColorSecondaryHighlight);
 }
 
 div.panels-ipe-pseudobutton-container:not(:first-child):active,
 div.panels-ipe-pseudobutton-container:not(:first-child):focus {
   background-color: var(--uiColorSecondaryHighlight);
   color: var(--uiLinkColorHover);
-  border-color: var(--uiColorSecondaryHighlight); /* 1. */
+  border-color: var(--uiColorSecondaryHighlight);
 }

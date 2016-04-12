@@ -6,6 +6,7 @@
   "styles": [
     "theme/panels/panels.css",
     "theme/panels/panels-ipe-control.css",
+    "theme/panels/panels-ipe-linkbar.css",
     "theme/modal/modal.css",
     "theme/fedit/fedit.css",
     "theme/navbar/navbar.css",

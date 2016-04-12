@@ -1,0 +1,111 @@
+/*
+ * .panels-ipe-linkbar
+ */
+
+ul.panels-ipe-linkbar {
+  margin-right: .5em !important;
+}
+
+ul.panels-ipe-linkbar li {
+  display: inline-block;
+}
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon,
+ul.panels-ipe-linkbar li a {
+  box-sizing: border-box;
+  display: block;
+  border-width: var(--buttonBorderWidth);
+  border-radius: var(--buttonBorderRadius);
+  box-shadow: none;
+  background: none;
+  background-color: var(--buttonBackgroundColor);
+  color: var(--buttonTextColor);
+  position: relative;
+}
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:before,
+ul.panels-ipe-linkbar li a:before {
+  margin-right: .25em;
+  font-size: var(--uiIconFontSize);
+  font-family: var(--uiIconFont);
+  font-weight: normal;
+}
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:before {
+  content: "\f047";
+}
+
+ul.panels-ipe-linkbar li.style a:before {
+  content: "\f013";
+}
+
+ul.panels-ipe-linkbar li.add-pane a:before {
+  content: "\f067";
+}
+
+ul.panels-ipe-linkbar li.edit a:before {
+  content: "\f040";
+}
+
+ul.panels-ipe-linkbar li.delete a:before {
+  content: "\f014";
+}
+
+ul.panels-ipe-linkbar li a:hover {
+  background: none;
+  background-color: var(--buttonTextColor);
+  color: var(--buttonBackgroundColor);
+  border-color: var(--buttonBackgroundColor);
+}
+
+/*
+ * Drag handle
+ */
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon {
+  text-align: center;
+}
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon span {
+  display: none;
+}
+
+
+/*
+ * Reset text-indent styles
+ */
+
+div.panels-ipe-handlebar-wrapper li a span,
+div.panels-ipe-newblock a span {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  text-indent: 0;
+  background-image: none !important;
+}
+
+/*
+ * Button group
+ */
+
+div.panels-ipe-handlebar-wrapper li {
+  margin: 0;
+}
+
+div.panels-ipe-handlebar-wrapper li > a {
+  border-radius: 0;
+}
+
+div.panels-ipe-handlebar-wrapper li.first > a {
+  border-top-left-radius: var(--buttonBorderRadius);
+  border-bottom-left-radius: var(--buttonBorderRadius);
+}
+
+div.panels-ipe-handlebar-wrapper li.last > a {
+  border-top-right-radius: var(--buttonBorderRadius);
+  border-bottom-right-radius: var(--buttonBorderRadius);
+}
+
+div.panels-ipe-handlebar-wrapper li:not(:first-child) {
+  margin-left: -var(--buttonBorderWidth);
+}

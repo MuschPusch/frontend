@@ -3188,73 +3188,6 @@ div.panels-ipe-newblock {
   box-shadow: none;
 }
 
-ul.panels-ipe-linkbar li {
-  width: 35px;
-  height: 35px;
-  display: inline-block;
-}
-
-div.panels-ipe-draghandle span.panels-ipe-draghandle-icon,
-ul.panels-ipe-linkbar li a {
-  box-sizing: border-box;
-  display: block;
-  width: 35px;
-  height: 35px;
-  border: rgb(15, 15, 15) 2px solid;
-  border-radius: 25px;
-  box-shadow: none;
-  background: none;
-  background-color: #fff;
-  color: rgb(15, 15, 15);
-  position: relative;
-}
-
-div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:before,
-ul.panels-ipe-linkbar li a:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 32px;
-  line-height: 32px;
-  text-align: center;
-  content: "x";
-  font-size: 16px;
-  font-family: FontAwesome;
-  font-weight: normal;
-}
-
-div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:before {
-  content: "\f047";
-}
-
-ul.panels-ipe-linkbar li.style a:before {
-  content: "\f013";
-}
-
-ul.panels-ipe-linkbar li.add-pane a:before {
-  content: "\f067";
-}
-
-ul.panels-ipe-linkbar li.edit a:before {
-  content: "\f040";
-}
-
-ul.panels-ipe-linkbar li.delete a:before {
-  content: "\f014";
-}
-
-ul.panels-ipe-linkbar li a:hover {
-  background: none;
-  background-color: rgb(15, 15, 15);
-  color: #fff;
-  border-color: #fff;
-}
-
-div.panels-ipe-draghandle span.panels-ipe-draghandle-icon span,
-ul.panels-ipe-linkbar li a span {
-  display: none;
-}
-
 div.panels-ipe-newblock a.style {
   margin-right: .5em;
 }
@@ -3411,6 +3344,117 @@ div.panels-ipe-pseudobutton-container:not(:first-child):focus {
   color: #fff;
   border-color: #666;
   /* 1. */
+}
+
+/*
+ * .panels-ipe-linkbar
+ */
+
+ul.panels-ipe-linkbar {
+  margin-right: .5em !important;
+}
+
+ul.panels-ipe-linkbar li {
+  display: inline-block;
+}
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon,
+ul.panels-ipe-linkbar li a {
+  box-sizing: border-box;
+  display: block;
+  border-width: 1px;
+  border-radius: 2px;
+  box-shadow: none;
+  background: none;
+  background-color: #fff;
+  color: rgb(15, 15, 15);
+  position: relative;
+}
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:before,
+ul.panels-ipe-linkbar li a:before {
+  margin-right: .25em;
+  font-size: 16px;
+  font-family: FontAwesome;
+  font-weight: normal;
+}
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:before {
+  content: "\f047";
+}
+
+ul.panels-ipe-linkbar li.style a:before {
+  content: "\f013";
+}
+
+ul.panels-ipe-linkbar li.add-pane a:before {
+  content: "\f067";
+}
+
+ul.panels-ipe-linkbar li.edit a:before {
+  content: "\f040";
+}
+
+ul.panels-ipe-linkbar li.delete a:before {
+  content: "\f014";
+}
+
+ul.panels-ipe-linkbar li a:hover {
+  background: none;
+  background-color: rgb(15, 15, 15);
+  color: #fff;
+  border-color: #fff;
+}
+
+/*
+ * Drag handle
+ */
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon {
+  text-align: center;
+}
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon span {
+  display: none;
+}
+
+/*
+ * Reset text-indent styles
+ */
+
+div.panels-ipe-handlebar-wrapper li a span,
+div.panels-ipe-newblock a span {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  text-indent: 0;
+  background-image: none !important;
+}
+
+/*
+ * Button group
+ */
+
+div.panels-ipe-handlebar-wrapper li {
+  margin: 0;
+}
+
+div.panels-ipe-handlebar-wrapper li > a {
+  border-radius: 0;
+}
+
+div.panels-ipe-handlebar-wrapper li.first > a {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+div.panels-ipe-handlebar-wrapper li.last > a {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+div.panels-ipe-handlebar-wrapper li:not(:first-child) {
+  margin-left: -1px;
 }
 
 /*

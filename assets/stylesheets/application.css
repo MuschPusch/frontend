@@ -3046,15 +3046,21 @@
  * Size: breakpoint 3 (large)
  */
 
+/*
+ * 1. Don't inherit font-family from the current site.
+ */
+
 div.ctools-modal-content,
 div.panels-ipe-control {
   font-family: sans-serif;
+  /* 1. */
 }
 
 div#panels-ipe-control-container {
   width: inherit;
-  bottom: 0;
   right: 0;
+  bottom: 0;
+  left: 0;
   background-color: #fff;
   box-shadow: none;
 }
@@ -3064,24 +3070,28 @@ div.panels-ipe-form-container .Form-item {
   display: inline;
 }
 
+/*
+ * Buttons and pseudo-buttons
+ */
+
 div.panels-ipe-pseudobutton-container,
 div.panels-ipe-control .panels-ipe-save,
 div.panels-ipe-control .panels-ipe-cancel,
 div.ctools-modal-content .Form-submit,
 div.ctools-modal-content .Form-input--submit {
-  background: inherit;
-  background-color: #fff;
-  border: 2px rgb(15, 15, 15) solid;
-  box-shadow: 0 0 2px rgba(#fff,0.2);
-  padding: 4px 15px 4px 15px;
-  border-radius: 25px;
-  line-height: 25px;
   height: auto;
-  color: rgb(15, 15, 15);
+  margin: 0 10px 0 10px;
+  padding: 4px 15px 4px 15px;
+  border-width: 1px;
+  border-radius: 2px;
+  border-style: solid;
   font-family: Helvetica, Arial, sans-serif !important;
   font-size: 12px !important;
   font-weight: bold;
-  margin: 0 10px 0 10px;
+  line-height: 25px;
+  background: inherit;
+  background-color: #fff;
+  color: rgb(15, 15, 15);
 }
 
 div.panels-ipe-pseudobutton-container:hover,
@@ -3090,14 +3100,14 @@ div.panels-ipe-control .panels-ipe-cancel:hover,
 div.ctools-modal-content .Form-submit:hover {
   background: none;
   background-color: rgb(15, 15, 15);
-  border-color: #fff;
+  /* border-color: var(--buttonTextColorHover); */
   color: #fff;
 }
 
 div.panels-ipe-pseudobutton-container a {
   font-family: Helvetica, Arial, sans-serif !important;
   font-size: 12px;
-  color: rgb(15, 15, 15);
+  color: inherit !important;
   background: inherit !important;
   padding: 0 0 0 30px !important;
   line-height: 25px !important;
@@ -3291,7 +3301,7 @@ div.panels-ipe-handlebar-wrapper {
 .panels-ipe-editing .panels-ipe-sort-container .ui-sortable-placeholder {
   outline: 2px solid #ff0;
   border: 0;
-  background-color: rgba(255,255,0,0.3);
+  background-color: rgba(255, 255, 0, .3);
   margin: 1em 0;
   border-radius: 0;
 }
@@ -3341,6 +3351,65 @@ div.panels-ipe-control .Form-item--checkbox {
 div.ctools-modal-content .Form-item-description,
 div.ctools-modal-content .focal-point-help {
   font-size: .75em;
+  /* 1. */
+}
+
+/*
+ * 1. Resets inherited gradients
+ */
+
+div.panels-ipe-pseudobutton-container:active,
+div.panels-ipe-pseudobutton-container:focus {
+  background-image: none;
+  /* 1. */
+}
+
+/*
+ * Primary Buttons
+ */
+
+div.panels-ipe-pseudobutton-container:first-child {
+  color: #03c;
+  background-color: transparent;
+}
+
+div.panels-ipe-pseudobutton-container:first-child:hover,
+div.panels-ipe-pseudobutton-container:first-child:focus {
+  color: #06f;
+}
+
+div.panels-ipe-pseudobutton-container:first-child:active,
+div.panels-ipe-pseudobutton-container:first-child:focus {
+  background-color: #06f;
+  color: #fff;
+  border-color: #06f;
+}
+
+/*
+ * Secondary Buttons
+ */
+
+div.panels-ipe-pseudobutton-container:not(:first-child) {
+  border-color: #ccc;
+  background-color: transparent;
+  color: rgb(15, 15, 15);
+}
+
+/*
+ * 1. REVIEW: border color on focus state.
+ */
+
+div.panels-ipe-pseudobutton-container:not(:first-child):hover,
+div.panels-ipe-pseudobutton-container:not(:first-child):focus {
+  border-color: #666;
+  /* 1. */
+}
+
+div.panels-ipe-pseudobutton-container:not(:first-child):active,
+div.panels-ipe-pseudobutton-container:not(:first-child):focus {
+  background-color: #666;
+  color: #fff;
+  border-color: #666;
   /* 1. */
 }
 
@@ -3480,15 +3549,15 @@ div.ctools-modal-content .modal-content {
   margin: -3px;
   padding: 3px;
   width: auto;
-  background-color: rgba(255,255,0,0.3);
+  background-color: rgba(255, 255, 0, .3);
 }
 
 .js-Fedit:focus {
   outline: 1px solid #ff0;
   border: 0;
   width: auto;
-  box-shadow: 0 0 10px rgba(255,255,0,0.3);
-  background-color: rgba(255,255,0,0.3);
+  box-shadow: 0 0 10px rgba(255, 255, 0, .3);
+  background-color: rgba(255, 255, 0, .3);
 }
 
 #navbar-administration {
@@ -3584,4 +3653,21 @@ div.ctools-modal-content .modal-content {
 @custom-media --lg-viewport (min-width: 1280px);
 @custom-media --retina only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx), only screen and (-webkit-min-device-pixel-ratio: 2);
 */
+
+:root {
+  /*
+   --uiColorPrimary: #4ccfef;
+   --uiColorPrimaryHighlight: #4ccfef;
+ */
+}
+
+/*
+ * Buttons
+ */
+
+
+
+/*
+ * Modal dialogs
+ */
 

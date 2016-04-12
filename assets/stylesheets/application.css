@@ -3080,8 +3080,8 @@ div.panels-ipe-control .panels-ipe-cancel,
 div.ctools-modal-content .Form-submit,
 div.ctools-modal-content .Form-input--submit {
   height: auto;
-  margin: 0 10px 0 10px;
-  padding: 4px 15px 4px 15px;
+  margin: 0 10px;
+  padding: 4px 15px;
   border-width: 1px;
   border-radius: 2px;
   border-style: solid;
@@ -3092,16 +3092,21 @@ div.ctools-modal-content .Form-input--submit {
   background: inherit;
   background-color: #fff;
   color: rgb(15, 15, 15);
+  border-color: #ccc;
+  background-color: transparent;
+  color: rgb(15, 15, 15);
 }
 
 div.panels-ipe-pseudobutton-container:hover,
 div.panels-ipe-control .panels-ipe-save:hover,
 div.panels-ipe-control .panels-ipe-cancel:hover,
-div.ctools-modal-content .Form-submit:hover {
+div.ctools-modal-content .Form-submit:hover,
+div.panels-ipe-pseudobutton-container:focus,
+div.panels-ipe-control .panels-ipe-save:focus,
+div.panels-ipe-control .panels-ipe-cancel:focus,
+div.ctools-modal-content .Form-submit:focus {
   background: none;
-  background-color: rgb(15, 15, 15);
-  /* border-color: var(--buttonTextColorHover); */
-  color: #fff;
+  border-color: #666;
 }
 
 div.panels-ipe-pseudobutton-container a {
@@ -3171,8 +3176,10 @@ div.panels-ipe-pseudobutton-container a:hover {
 div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:hover,
 .PanelsCategories-box a:hover,
 .PanelsAddContentLink a:hover {
-  color: #fff !important;
-  background-color: rgb(15, 15, 15);
+  /*
+  color: var(--uiLinkColorHover) !important;
+  background-color: var(--uiLinkColor);
+ */
 }
 
 div.panels-ipe-placeholder {
@@ -3302,6 +3309,7 @@ div.panels-ipe-pseudobutton-container:focus {
  */
 
 div.panels-ipe-pseudobutton-container:first-child {
+  border-color: #03c;
   color: #03c;
   background-color: transparent;
 }
@@ -3309,6 +3317,7 @@ div.panels-ipe-pseudobutton-container:first-child {
 div.panels-ipe-pseudobutton-container:first-child:hover,
 div.panels-ipe-pseudobutton-container:first-child:focus {
   color: #06f;
+  border-color: #06f;
 }
 
 div.panels-ipe-pseudobutton-container:first-child:active,
@@ -3328,14 +3337,9 @@ div.panels-ipe-pseudobutton-container:not(:first-child) {
   color: rgb(15, 15, 15);
 }
 
-/*
- * 1. REVIEW: border color on focus state.
- */
-
 div.panels-ipe-pseudobutton-container:not(:first-child):hover,
 div.panels-ipe-pseudobutton-container:not(:first-child):focus {
   border-color: #666;
-  /* 1. */
 }
 
 div.panels-ipe-pseudobutton-container:not(:first-child):active,
@@ -3343,7 +3347,67 @@ div.panels-ipe-pseudobutton-container:not(:first-child):focus {
   background-color: #666;
   color: #fff;
   border-color: #666;
-  /* 1. */
+}
+
+/*
+ * panels-ipe-form-container
+ *
+ * Sets save button as primary action.
+ */
+
+.panels-ipe-form-container form div:nth-of-type(1) > .Form-input--submit {
+  border-color: #03c;
+  color: #03c;
+  background-color: transparent;
+}
+
+.panels-ipe-form-container form div:nth-of-type(1) > .Form-input--submit:hover,
+.panels-ipe-form-container form div:nth-of-type(1) > .Form-input--submit:focus {
+  color: #06f;
+  border-color: #06f;
+}
+
+.panels-ipe-form-container form div:nth-of-type(1) > .Form-input--submit:active,
+.panels-ipe-form-container form div:nth-of-type(1) > .Form-input--submit:focus {
+  background-color: #06f;
+  color: #fff;
+  border-color: #06f;
+}
+
+/*
+ * Secondary actions
+ */
+
+.panels-ipe-form-container form .Form-input--submit {
+  border-color: #ccc;
+  background-color: transparent;
+  color: rgb(15, 15, 15);
+}
+
+.panels-ipe-form-container form .Form-input--submit:hover,
+.panels-ipe-form-container form .Form-input--submit:focus {
+  border-color: #666;
+}
+
+.panels-ipe-form-container form .Form-input--submit:active,
+.panels-ipe-form-container form .Form-input--submit:focus {
+  background-color: #666;
+  color: #fff;
+  border-color: #666;
+}
+
+/*
+ * Set checkbox layout.
+ */
+
+.panels-ipe-form-container .Form-item--checkbox {
+  display: inline !important;
+  font-size: .75em;
+  line-height: 2.3333333333333335;
+}
+
+.panels-ipe-form-container .Form-wrapInput--checkbox {
+  padding-left: 10px;
 }
 
 /*
@@ -3362,13 +3426,19 @@ div.panels-ipe-draghandle span.panels-ipe-draghandle-icon,
 ul.panels-ipe-linkbar li a {
   box-sizing: border-box;
   display: block;
-  border-width: 1px;
-  border-radius: 2px;
   box-shadow: none;
   background: none;
   background-color: #fff;
   color: rgb(15, 15, 15);
-  position: relative;
+}
+
+ul.panels-ipe-linkbar li a {
+  border-width: 1px;
+  border-radius: 2px;
+}
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon {
+  border: 0;
 }
 
 div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:before,
@@ -3381,6 +3451,8 @@ ul.panels-ipe-linkbar li a:before {
 
 div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:before {
   content: "\f047";
+  content: "\f0c9";
+  /* Bar drag handle icon */
 }
 
 ul.panels-ipe-linkbar li.style a:before {
@@ -3399,11 +3471,17 @@ ul.panels-ipe-linkbar li.delete a:before {
   content: "\f014";
 }
 
-ul.panels-ipe-linkbar li a:hover {
+ul.panels-ipe-linkbar li a:hover,
+ul.panels-ipe-linkbar li a:focus {
   background: none;
-  background-color: rgb(15, 15, 15);
+  border-color: #666;
+}
+
+ul.panels-ipe-linkbar li a:active,
+ul.panels-ipe-linkbar li a:focus {
+  background-color: #666;
   color: #fff;
-  border-color: #fff;
+  border-color: #666;
 }
 
 /*
@@ -3433,8 +3511,33 @@ div.panels-ipe-newblock a span {
 
 /*
  * Button group
+ *
+ * TODO: border z-index at hover state.
  */
 
+div.panels-ipe-handlebar-wrapper li.first > a {
+  border-color: #03c;
+  color: #03c;
+  background-color: transparent;
+}
+
+div.panels-ipe-handlebar-wrapper li.first > a:hover,
+div.panels-ipe-handlebar-wrapper li.first > a:focus {
+  color: #06f;
+}
+
+div.panels-ipe-handlebar-wrapper li.first > a:active,
+div.panels-ipe-handlebar-wrapper li.first > a:focus {
+  background-color: #06f;
+  color: #fff;
+  border-color: #06f;
+}
+
+div.panels-ipe-handlebar-wrapper li {
+  margin: 0 .25em 0 0;
+}
+
+/*
 div.panels-ipe-handlebar-wrapper li {
   margin: 0;
 }
@@ -3444,18 +3547,20 @@ div.panels-ipe-handlebar-wrapper li > a {
 }
 
 div.panels-ipe-handlebar-wrapper li.first > a {
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
+  border-top-left-radius: var(--buttonBorderRadius);
+  border-bottom-left-radius: var(--buttonBorderRadius);
+
 }
 
 div.panels-ipe-handlebar-wrapper li.last > a {
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-top-right-radius: var(--buttonBorderRadius);
+  border-bottom-right-radius: var(--buttonBorderRadius);
 }
 
 div.panels-ipe-handlebar-wrapper li:not(:first-child) {
-  margin-left: -1px;
+  margin-left: -var(--buttonBorderWidth);
 }
+ */
 
 /*
  * Modal

@@ -1,12 +1,17 @@
+/*
+ * 1. Don't inherit font-family from the current site.
+ */
+
 div.ctools-modal-content,
 div.panels-ipe-control {
-  font-family: sans-serif;
+  font-family: sans-serif; /* 1. */
 }
 
 div#panels-ipe-control-container {
   width: inherit;
-  bottom: 0;
   right: 0;
+  bottom: 0;
+  left: 0;
   background-color: #fff;
   box-shadow: none;
 }
@@ -16,24 +21,28 @@ div.panels-ipe-form-container .Form-item {
  display: inline;
 }
 
+/*
+ * Buttons and pseudo-buttons
+ */
+
 div.panels-ipe-pseudobutton-container,
 div.panels-ipe-control .panels-ipe-save,
 div.panels-ipe-control .panels-ipe-cancel,
 div.ctools-modal-content .Form-submit,
 div.ctools-modal-content .Form-input--submit {
-  background: inherit;
-  background-color: var(--buttonBackgroundColor);
-  border: 2px var(--buttonTextColor) solid;
-  box-shadow: 0 0 2px rgba(var(--buttonBackgroundColor),0.2);
-  padding: 4px 15px 4px 15px;
-  border-radius: 25px;
-  line-height: 25px;
   height: auto;
-  color: var(--buttonTextColor);
+  margin: 0 10px 0 10px;
+  padding: 4px 15px 4px 15px;
+  border-width: var(--buttonBorderWidth);
+  border-radius: var(--buttonBorderRadius);
+  border-style: solid;
   font-family: var(--uiFont) !important;
   font-size: var(--uiFontSize--sm) !important;
   font-weight: bold;
-  margin: 0 10px 0 10px;
+  line-height: 25px;
+  background: inherit;
+  background-color: var(--buttonBackgroundColor);
+  color: var(--buttonTextColor);
 }
 
 div.panels-ipe-pseudobutton-container:hover,
@@ -42,15 +51,14 @@ div.panels-ipe-control .panels-ipe-cancel:hover,
 div.ctools-modal-content .Form-submit:hover {
   background: none;
   background-color: var(--buttonBackgroundColorHover);
-  border-color: var(--buttonTextColorHover);
+  /* border-color: var(--buttonTextColorHover); */
   color: var(--buttonTextColorHover);
 }
-
 
 div.panels-ipe-pseudobutton-container a {
   font-family: var(--uiFont) !important;
   font-size: var(--uiFontSize--sm);
-  color: var(--buttonTextColor);
+  color: inherit !important;
   background: inherit !important;
   padding: 0 0 0 30px !important;
   line-height: 25px !important;

@@ -1,0 +1,60 @@
+.panels-ipe-control {
+
+}
+
+/*
+ * 1. Resets inherited gradients
+ */
+
+div.panels-ipe-pseudobutton-container:active,
+div.panels-ipe-pseudobutton-container:focus {
+  background-image: none; /* 1. */
+}
+
+/*
+ * Primary Buttons
+ */
+
+
+div.panels-ipe-pseudobutton-container:first-child {
+  color: var(--uiColorPrimary);
+  background-color: transparent;
+}
+
+div.panels-ipe-pseudobutton-container:first-child:hover,
+div.panels-ipe-pseudobutton-container:first-child:focus {
+  color: var(--uiColorPrimaryHighlight);
+}
+
+div.panels-ipe-pseudobutton-container:first-child:active,
+div.panels-ipe-pseudobutton-container:first-child:focus {
+  background-color: var(--uiColorPrimaryHighlight);
+  color: var(--uiLinkColorHover);
+  border-color: var(--uiColorPrimaryHighlight);
+}
+
+/*
+ * Secondary Buttons
+ */
+
+div.panels-ipe-pseudobutton-container:not(:first-child) {
+  border-color: var(--uiColorSecondary);
+  background-color: transparent;
+  color: var(--uiLinkColor);
+}
+
+/*
+ * 1. REVIEW: border color on focus state.
+ */
+
+div.panels-ipe-pseudobutton-container:not(:first-child):hover,
+div.panels-ipe-pseudobutton-container:not(:first-child):focus {
+  border-color: var(--uiColorSecondaryHighlight); /* 1. */
+}
+
+div.panels-ipe-pseudobutton-container:not(:first-child):active,
+div.panels-ipe-pseudobutton-container:not(:first-child):focus {
+  background-color: var(--uiColorSecondaryHighlight);
+  color: var(--uiLinkColorHover);
+  border-color: var(--uiColorSecondaryHighlight); /* 1. */
+}

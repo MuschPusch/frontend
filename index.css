@@ -14,18 +14,41 @@
   --uiIconFont: FontAwesome;
   --uiIconFontSize: 16px;
 
-  --uiHilightBackgroundColor: rgba(255,255,0,0.3);
+  --uiHilightBackgroundColor: rgba(255, 255, 0, .3);
   --uiHilightColor: #ff0;
   --uiPlaceholderTextColor: rgb(15, 15, 15);
 
   --uiLinkColor: rgb(15, 15, 15);
   --uiLinkColorHover: #fff;
 
+  --uiColorPrimary: #03c;
+  --uiColorPrimaryHighlight: #06f;
+/*
+   --uiColorPrimary: #4ccfef;
+   --uiColorPrimaryHighlight: #4ccfef;
+ */
+  --uiColorSecondary: #ccc;
+  --uiColorSecondaryHighlight: #666;
+}
+
+/*
+ * Buttons
+ */
+
+:root {
+  --buttonBorderWidth: 1px;
+  --buttonBorderRadius: 2px;
   --buttonBackgroundColor: #fff;
   --buttonBackgroundColorHover: rgb(15, 15, 15);
   --buttonTextColor: rgb(15, 15, 15);
   --buttonTextColorHover: #fff;
+}
 
+/*
+ * Modal dialogs
+ */
+
+:root {
   --modalBackDropBackgroundColor: rgba(0, 0, 0, .8);
   --modalTextColor: rgb(15, 15, 15);
   --modalBackgroundColor: #fff;

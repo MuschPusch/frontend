@@ -14,13 +14,19 @@ div.panels-ipe-draghandle span.panels-ipe-draghandle-icon,
 ul.panels-ipe-linkbar li a {
   box-sizing: border-box;
   display: block;
-  border-width: var(--buttonBorderWidth);
-  border-radius: var(--buttonBorderRadius);
   box-shadow: none;
   background: none;
   background-color: var(--buttonBackgroundColor);
   color: var(--buttonTextColor);
-  position: relative;
+}
+
+ul.panels-ipe-linkbar li a {
+  border-width: var(--buttonBorderWidth);
+  border-radius: var(--buttonBorderRadius);
+}
+
+div.panels-ipe-draghandle span.panels-ipe-draghandle-icon {
+  border: 0;
 }
 
 div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:before,
@@ -33,6 +39,7 @@ ul.panels-ipe-linkbar li a:before {
 
 div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:before {
   content: "\f047";
+  content: "\f0c9"; /* Bar drag handle icon */
 }
 
 ul.panels-ipe-linkbar li.style a:before {
@@ -75,7 +82,6 @@ div.panels-ipe-draghandle span.panels-ipe-draghandle-icon {
 div.panels-ipe-draghandle span.panels-ipe-draghandle-icon span {
   display: none;
 }
-
 
 /*
  * Reset text-indent styles
@@ -130,6 +136,7 @@ div.panels-ipe-handlebar-wrapper li > a {
 div.panels-ipe-handlebar-wrapper li.first > a {
   border-top-left-radius: var(--buttonBorderRadius);
   border-bottom-left-radius: var(--buttonBorderRadius);
+
 }
 
 div.panels-ipe-handlebar-wrapper li.last > a {
@@ -140,3 +147,4 @@ div.panels-ipe-handlebar-wrapper li.last > a {
 div.panels-ipe-handlebar-wrapper li:not(:first-child) {
   margin-left: -var(--buttonBorderWidth);
 }
+ */

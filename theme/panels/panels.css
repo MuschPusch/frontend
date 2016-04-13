@@ -1,7 +1,17 @@
+/*
+ * 1. Don't inherit font-family from the current site.
+ */
+
+div.ctools-modal-content,
+div.panels-ipe-control {
+  font-family: sans-serif; /* 1. */
+}
+
 div#panels-ipe-control-container {
   width: inherit;
-  bottom: 0;
   right: 0;
+  bottom: 0;
+  left: 0;
   background-color: #fff;
   box-shadow: none;
 }
@@ -11,43 +21,52 @@ div.panels-ipe-form-container .Form-item {
  display: inline;
 }
 
+/*
+ * Buttons and pseudo-buttons
+ */
+
 div.panels-ipe-pseudobutton-container,
 div.panels-ipe-control .panels-ipe-save,
 div.panels-ipe-control .panels-ipe-cancel,
 div.ctools-modal-content .Form-submit,
 div.ctools-modal-content .Form-input--submit {
-  background: inherit;
-  background-color: var(--buttonBackgroundColor);
-  border: 2px var(--buttonTextColor) solid;
-  box-shadow: 0 0 2px rgba(var(--buttonBackgroundColor),0.2);
-  padding: 4px 15px 4px 15px;
-  border-radius: 25px;
-  line-height: 25px;
   height: auto;
-  color: var(--buttonTextColor);
+  margin: 0 10px;
+  margin: 0;
+  margin-right: .5em !important;
+  padding: 4px 15px;
+  border-width: var(--buttonBorderWidth);
+  border-radius: var(--buttonBorderRadius);
+  border-style: solid;
   font-family: var(--uiFont) !important;
   font-size: var(--uiFontSize--sm) !important;
   font-weight: bold;
-  margin: 0 10px 0 10px;
+  line-height: 25px;
+  background: inherit;
+  background-color: var(--buttonBackgroundColor);
+  color: var(--buttonTextColor);
 
+  border-color: var(--uiColorSecondary);
+  background-color: transparent;
+  color: var(--uiLinkColor);
 }
 
 div.panels-ipe-pseudobutton-container:hover,
 div.panels-ipe-control .panels-ipe-save:hover,
 div.panels-ipe-control .panels-ipe-cancel:hover,
-div.ctools-modal-content .Form-submit:hover {
-
+div.ctools-modal-content .Form-submit:hover,
+div.panels-ipe-pseudobutton-container:focus,
+div.panels-ipe-control .panels-ipe-save:focus,
+div.panels-ipe-control .panels-ipe-cancel:focus,
+div.ctools-modal-content .Form-submit:focus {
   background: none;
-  background-color: var(--buttonBackgroundColorHover);
-  border-color: var(--buttonTextColorHover);
-  color: var(--buttonTextColorHover);
+  border-color: var(--uiColorSecondaryHighlight);
 }
-
 
 div.panels-ipe-pseudobutton-container a {
   font-family: var(--uiFont) !important;
   font-size: var(--uiFontSize--sm);
-  color: var(--buttonTextColor);
+  color: inherit !important;
   background: inherit !important;
   padding: 0 0 0 30px !important;
   line-height: 25px !important;
@@ -71,9 +90,8 @@ div.panels-ipe-pseudobutton-container a.panels-ipe-change-layout:before {
 }
 
 div.panels-ipe-pseudobutton-container a:hover {
-  color: var(--buttonTextColorHover)
+  color: var(--buttonTextColorHover);
 }
-
 
 .PanelsCategories-box a,
 .PanelsAddContentLink {
@@ -91,8 +109,6 @@ div.panels-ipe-pseudobutton-container a:hover {
   line-height: 100%;
 }
 
-
-
 .PanelsCategories-box a:before,
 .PanelsAddContentLink a:before {
   font-family: var(--uiIconFont);
@@ -102,104 +118,27 @@ div.panels-ipe-pseudobutton-container a:hover {
   top: 12px;
   font-weight: normal;
 }
+
 .PanelsCategories-box a:before {
   content: "\f009";
 
 }
 .PanelsAddContentLink a:before {
   content: "\f12e";
-
 }
 
 div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:hover,
 .PanelsCategories-box a:hover,
 .PanelsAddContentLink a:hover {
+/*
   color: var(--uiLinkColorHover) !important;
   background-color: var(--uiLinkColor);
-}
-
-
-div.panels-ipe-placeholder {
-  background-color: var(--buttonTextColor);
-  border: 0;
-  color: var(--buttonBackgroundColor);
-  font-family: var(--uiFont);
-  font-size: var(--uiFontSize--md);
-  color: var(--buttonBackgroundColor);
-
+ */
 }
 
 div.panels-ipe-newblock {
   box-shadow: none;
 }
-
-ul.panels-ipe-linkbar li {
-  width: 35px;
-  height: 35px;
-  display: inline-block;
-}
-
-div.panels-ipe-draghandle span.panels-ipe-draghandle-icon,
-ul.panels-ipe-linkbar li a {
-  box-sizing: border-box;
-  display: block;
-  width: 35px;
-  height: 35px;
-  border: var(--buttonTextColor) 2px solid;
-  border-radius: 25px;
-  box-shadow: none;
-  background: none;
-  background-color: var(--buttonBackgroundColor);
-  color: var(--buttonTextColor);
-  position: relative;
-}
-
-div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:before,
-ul.panels-ipe-linkbar li a:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 32px;
-  line-height: 32px;
-  text-align: center;
-  content: "x";
-  font-size: var(--uiIconFontSize);
-  font-family: var(--uiIconFont);
-  font-weight: normal;
-}
-
-div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:before {
-  content: "\f047";
-}
-
-ul.panels-ipe-linkbar li.style a:before {
-  content: "\f013";
-}
-
-ul.panels-ipe-linkbar li.add-pane a:before {
-  content: "\f067";
-}
-
-ul.panels-ipe-linkbar li.edit a:before {
-  content: "\f040";
-}
-
-ul.panels-ipe-linkbar li.delete a:before {
-  content: "\f014";
-}
-
-ul.panels-ipe-linkbar li a:hover {
-  background: none;
-  background-color: var(--buttonTextColor);
-  color: var(--buttonBackgroundColor);
-  border-color: var(--buttonBackgroundColor);
-}
-div.panels-ipe-draghandle span.panels-ipe-draghandle-icon span,
-ul.panels-ipe-linkbar li a span {
-  display: none;
-}
-
-
 
 div.panels-ipe-newblock a.style {
   margin-right: .5em;
@@ -261,4 +200,40 @@ div.panels-ipe-placeholder h3 {
   font-size: var(--uiFontSize--md);
   padding-left: 20px;
   width: 75%;
+}
+
+/*
+ * Float check boxes to the left.
+ */
+
+div.ctools-modal-content .Form-item--checkbox,
+div.panels-ipe-control .Form-item--checkbox {
+  display: block;
+  overflow: hidden;
+}
+
+div.ctools-modal-content .Form-wrapInput--checkbox,
+div.panels-ipe-control .Form-wrapInput--checkbox {
+  float: left;
+  margin-right: .5em;
+}
+
+div.ctools-modal-content .Form-item--checkbox label:last-child,
+div.panels-ipe-control .Form-item--checkbox label:last-child {
+  float: left;
+}
+
+div.panels-ipe-control .Form-item--checkbox {
+  margin: 0 10px 0 10px;
+}
+
+/*
+ * 1. Make descriptions smaller.
+ *
+ * NB: .focal-point-help duplicates .Form-item-description
+ */
+
+div.ctools-modal-content .Form-item-description,
+div.ctools-modal-content .focal-point-help {
+  font-size: .75em; /* 1. */
 }

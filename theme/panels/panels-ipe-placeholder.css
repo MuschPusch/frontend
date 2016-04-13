@@ -1,0 +1,18 @@
+/*
+ * .panels-ipe-placeholder
+ */
+
+
+div.panels-ipe-placeholder {
+  background-color: var(--buttonTextColor);
+  border: 0;
+  color: var(--buttonBackgroundColor);
+  font-family: var(--uiFont);
+  font-size: var(--uiFontSize--md);
+  color: var(--buttonBackgroundColor);
+}
+
+.panels-ipe-placeholder ul.panels-ipe-linkbar li a {
+  color: #fff;
+  border-color: #666;
+}

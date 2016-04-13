@@ -16,7 +16,6 @@ ul.panels-ipe-linkbar li a {
   display: block;
   box-shadow: none;
   background: none;
-  background-color: var(--buttonBackgroundColor);
   color: var(--buttonTextColor);
 }
 
@@ -38,7 +37,6 @@ ul.panels-ipe-linkbar li a:before {
 }
 
 div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:before {
-  content: "\f047";
   content: "\f0c9"; /* Bar drag handle icon */
 }
 

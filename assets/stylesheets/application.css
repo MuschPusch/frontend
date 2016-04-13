@@ -3081,6 +3081,8 @@ div.ctools-modal-content .Form-submit,
 div.ctools-modal-content .Form-input--submit {
   height: auto;
   margin: 0 10px;
+  margin: 0;
+  margin-right: .5em !important;
   padding: 4px 15px;
   border-width: 1px;
   border-radius: 2px;
@@ -3180,15 +3182,6 @@ div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:hover,
   color: var(--uiLinkColorHover) !important;
   background-color: var(--uiLinkColor);
  */
-}
-
-div.panels-ipe-placeholder {
-  background-color: rgb(15, 15, 15);
-  border: 0;
-  color: #fff;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  color: #fff;
 }
 
 div.panels-ipe-newblock {
@@ -3428,7 +3421,6 @@ ul.panels-ipe-linkbar li a {
   display: block;
   box-shadow: none;
   background: none;
-  background-color: #fff;
   color: rgb(15, 15, 15);
 }
 
@@ -3450,7 +3442,6 @@ ul.panels-ipe-linkbar li a:before {
 }
 
 div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:before {
-  content: "\f047";
   content: "\f0c9";
   /* Bar drag handle icon */
 }
@@ -3561,6 +3552,24 @@ div.panels-ipe-handlebar-wrapper li:not(:first-child) {
   margin-left: -var(--buttonBorderWidth);
 }
  */
+
+/*
+ * .panels-ipe-placeholder
+ */
+
+div.panels-ipe-placeholder {
+  background-color: rgb(15, 15, 15);
+  border: 0;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #fff;
+}
+
+.panels-ipe-placeholder ul.panels-ipe-linkbar li a {
+  color: #fff;
+  border-color: #666;
+}
 
 /*
  * Modal

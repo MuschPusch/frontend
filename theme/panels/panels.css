@@ -32,6 +32,8 @@ div.ctools-modal-content .Form-submit,
 div.ctools-modal-content .Form-input--submit {
   height: auto;
   margin: 0 10px;
+  margin: 0;
+  margin-right: .5em !important;
   padding: 4px 15px;
   border-width: var(--buttonBorderWidth);
   border-radius: var(--buttonBorderRadius);
@@ -132,15 +134,6 @@ div.panels-ipe-draghandle span.panels-ipe-draghandle-icon:hover,
   color: var(--uiLinkColorHover) !important;
   background-color: var(--uiLinkColor);
  */
-}
-
-div.panels-ipe-placeholder {
-  background-color: var(--buttonTextColor);
-  border: 0;
-  color: var(--buttonBackgroundColor);
-  font-family: var(--uiFont);
-  font-size: var(--uiFontSize--md);
-  color: var(--buttonBackgroundColor);
 }
 
 div.panels-ipe-newblock {

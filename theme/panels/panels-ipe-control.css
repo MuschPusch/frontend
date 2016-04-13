@@ -1,0 +1,117 @@
+.panels-ipe-control {}
+
+/*
+ * 1. Resets inherited gradients
+ */
+
+div.panels-ipe-pseudobutton-container:active,
+div.panels-ipe-pseudobutton-container:focus {
+  background-image: none; /* 1. */
+}
+
+/*
+ * Primary Buttons
+ */
+
+
+div.panels-ipe-pseudobutton-container:first-child {
+  border-color: var(--uiColorPrimary);
+  color: var(--uiColorPrimary);
+  background-color: transparent;
+}
+
+div.panels-ipe-pseudobutton-container:first-child:hover,
+div.panels-ipe-pseudobutton-container:first-child:focus {
+  color: var(--uiColorPrimaryHighlight);
+  border-color: var(--uiColorPrimaryHighlight);
+}
+
+div.panels-ipe-pseudobutton-container:first-child:active,
+div.panels-ipe-pseudobutton-container:first-child:focus {
+  background-color: var(--uiColorPrimaryHighlight);
+  color: var(--uiLinkColorHover);
+  border-color: var(--uiColorPrimaryHighlight);
+}
+
+/*
+ * Secondary Buttons
+ */
+
+div.panels-ipe-pseudobutton-container:not(:first-child) {
+  border-color: var(--uiColorSecondary);
+  background-color: transparent;
+  color: var(--uiLinkColor);
+}
+
+div.panels-ipe-pseudobutton-container:not(:first-child):hover,
+div.panels-ipe-pseudobutton-container:not(:first-child):focus {
+  border-color: var(--uiColorSecondaryHighlight);
+}
+
+div.panels-ipe-pseudobutton-container:not(:first-child):active,
+div.panels-ipe-pseudobutton-container:not(:first-child):focus {
+  background-color: var(--uiColorSecondaryHighlight);
+  color: var(--uiLinkColorHover);
+  border-color: var(--uiColorSecondaryHighlight);
+}
+
+/*
+ * panels-ipe-form-container
+ *
+ * Sets save button as primary action.
+ */
+
+.panels-ipe-form-container form div:nth-of-type(1) > .Form-input--submit {
+  border-color: var(--uiColorPrimary);
+  color: var(--uiColorPrimary);
+  background-color: transparent;
+}
+
+.panels-ipe-form-container form div:nth-of-type(1) > .Form-input--submit:hover,
+.panels-ipe-form-container form div:nth-of-type(1) > .Form-input--submit:focus {
+  color: var(--uiColorPrimaryHighlight);
+  border-color: var(--uiColorPrimaryHighlight);
+}
+
+.panels-ipe-form-container form div:nth-of-type(1) > .Form-input--submit:active,
+.panels-ipe-form-container form div:nth-of-type(1) > .Form-input--submit:focus {
+  background-color: var(--uiColorPrimaryHighlight);
+  color: var(--uiLinkColorHover);
+  border-color: var(--uiColorPrimaryHighlight);
+}
+
+/*
+ * Secondary actions
+ */
+
+.panels-ipe-form-container form .Form-input--submit {
+  border-color: var(--uiColorSecondary);
+  background-color: transparent;
+  color: var(--uiLinkColor);
+}
+
+.panels-ipe-form-container form .Form-input--submit:hover,
+.panels-ipe-form-container form .Form-input--submit:focus {
+  border-color: var(--uiColorSecondaryHighlight);
+}
+
+.panels-ipe-form-container form .Form-input--submit:active,
+.panels-ipe-form-container form .Form-input--submit:focus {
+  background-color: var(--uiColorSecondaryHighlight);
+  color: var(--uiLinkColorHover);
+  border-color: var(--uiColorSecondaryHighlight);
+}
+
+/*
+ * Set checkbox layout.
+ */
+
+.panels-ipe-form-container .Form-item--checkbox {
+  display: inline !important;
+  font-size: .75em;
+  line-height: calc(35 / 15);
+}
+
+.panels-ipe-form-container .Form-wrapInput--checkbox {
+  padding-left: 10px;
+}

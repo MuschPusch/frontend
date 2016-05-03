@@ -89,6 +89,10 @@ div.panels-ipe-pseudobutton-container a.panels-ipe-change-layout:before {
  content: "\f00a";
 }
 
+div.panels-ipe-pseudobutton-container a.panels-ipe-panels-clone-button:before {
+  content: "\f24d";
+}
+
 div.panels-ipe-pseudobutton-container a:hover {
   color: var(--buttonTextColorHover);
 }

@@ -3137,6 +3137,10 @@ div.panels-ipe-pseudobutton-container a.panels-ipe-change-layout:before {
   content: "\f00a";
 }
 
+div.panels-ipe-pseudobutton-container a.panels-ipe-panels-clone-button:before {
+  content: "\f24d";
+}
+
 div.panels-ipe-pseudobutton-container a:hover {
   color: #fff;
 }
@@ -3581,9 +3585,17 @@ div.panels-ipe-placeholder {
 }
 
 .modal-default {
-  width: 85.42%;
-  max-width: 1230px;
-  max-height: calc(100% - 30px);
+  position: fixed !important;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  max-width: 1280px;
+  max-height: 1000px;
   top: 50% !important;
   left: 50% !important;
   -webkit-transform: translate(-50%, -50%);
@@ -3592,30 +3604,49 @@ div.panels-ipe-placeholder {
 }
 
 div.ctools-modal-content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100% !important;
+  height: 100% !important;
   margin: 0;
   border: 0;
   box-shadow: none;
-  border-radius: 5px;
+  border-radius: 0;
   font-size: 16px;
   background-color: transparent;
 }
 
 div.ctools-modal-content .modal-header {
-  padding: 0;
-  background: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 5px 5px 5px 10px;
+  background: #000;
+  border-radius: 0;
 }
 
 div.ctools-modal-content .modal-title {
+  font-size: 18px;
   text-shadow: none;
   color: #fff;
 }
 
 div.ctools-modal-content a.close {
-  position: absolute;
+  position: relative;
   display: block;
-  top: 0;
-  right: 18px;
   background: none;
   color: #646464;
   text-decoration: none;
@@ -3628,15 +3659,16 @@ div.ctools-modal-content a.close:before {
   display: block;
   content: "\f00d";
   position: absolute;
-  width: 100%;
-  height: 100%;
   line-height: 20px;
   text-align: center;
   top: 0;
-  left: 0;
+  right: 0;
   color: #fff;
   font-family: FontAwesome;
-  font-size: 16px;
+  font-size: 20px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 div.ctools-modal-content a.close:hover:before {
@@ -3647,7 +3679,9 @@ div.ctools-modal-content .modal-content {
   width: 100% !important;
   padding: 20px;
   background-color: #fff;
-  border-radius: 5px;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 /*

@@ -4,49 +4,56 @@
 
 #modalBackdrop {
   position: fixed !important;
-  background-color: var(--modalBackDropBackgroundColor) !important;
+  background-color: rgba(0, 0, 0, .8) !important;
 }
 
 .modal-default {
-  width: 85.42%;
-  max-width: 1230px;
-  max-height: calc(100% - 30px);
+  position: fixed !important;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  max-width: 1280px;
+  max-height: 1000px;
   top: 50% !important;
   left: 50% !important;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
-@media (--lg-viewport) {
-  .modal-default {
-    position: fixed !important;
-  }
-}
-
 div.ctools-modal-content {
+  display: flex;
+  flex-direction: column;
   width: 100% !important;
+  height: 100% !important;
   margin: 0;
   border: 0;
   box-shadow: none;
-  border-radius: 5px;
+  border-radius: 0;
   font-size: 16px;
   background-color: transparent;
 }
 
 div.ctools-modal-content .modal-header {
-  padding: 0;
-  background: none;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 5px 5px 10px;
+  background: #000;
+  border-radius: 0;
 }
 
 div.ctools-modal-content .modal-title {
+  font-size: 18px;
   text-shadow: none;
   color: #fff;
 }
 
 div.ctools-modal-content a.close {
-  position: absolute;
+  position: relative;
   display: block;
-  top: 0;
-  right: 18px;
   background: none;
   color: #646464;
   text-decoration: none;
@@ -59,27 +66,27 @@ div.ctools-modal-content a.close:before {
   display: block;
   content: "\f00d";
   position: absolute;
-  width: 100%;
-  height: 100%;
   line-height: 20px;
   text-align: center;
   top: 0;
-  left: 0;
-  color: var(--modalBackgroundColor);
-  font-family: var(--uiIconFont);
-  font-size: var(--uiIconFontSize);
+  right: 0;
+  color: #fff;
+  font-family: FontAwesome;
+  font-size: 20px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 div.ctools-modal-content a.close:hover:before {
   color: #C7C7C7;
 }
 
-
 div.ctools-modal-content .modal-content {
   width: 100% !important;
   padding: 20px;
   background-color: #fff;
-  border-radius: 5px;
+  flex-grow: 1;
 }
 
 /*

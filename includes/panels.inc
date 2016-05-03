@@ -68,6 +68,7 @@ function frontend_preprocess_panels_add_content_modal(&$vars) {
 
   // Merge all items to others except fielded panes.
   foreach ($vars['categories'] as $root_key => $category) {
+    sort($category['content']);
     foreach ($category['content'] as $content_type) {
       $vars['root_content'] .= theme('panels_add_content_link', array(
         'renderer' => $vars['renderer'],
